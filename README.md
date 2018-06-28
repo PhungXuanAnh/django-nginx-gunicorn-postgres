@@ -1,0 +1,1 @@
+This sample app for provide an initialize for other samples or other projects
