@@ -22,4 +22,11 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^polls/', include('polls.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]
+
+from django.conf import settings
+from django.conf.urls.static import static
+if settings.DEBUG:
+    # static files (images, css, javascript, etc.)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
