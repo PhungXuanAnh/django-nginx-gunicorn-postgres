@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Accessibility Compliance/Web Content Accessibility Guidelines - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Accessibility_Compliance/Web_Content_Accessibility_Guidelines","wgTitle":"CKEditor 3.x/Accessibility Compliance/Web Content Accessibility Guidelines","wgCurRevisionId":2712,"wgRevisionId":2712,"wgArticleId":734,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Accessibility_Compliance/Web_Content_Accessibility_Guidelines","wgRelevantArticleId":734,"wgRequestId":"WzWpDaKAnWD1LUOOWkbaIgAAAJA","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Accessibility_Compliance_Web_Content_Accessibility_Guidelines rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Web_Content_Accessibility_Guidelines.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FAccessibility+Compliance%2FWeb+Content+Accessibility+Guidelines">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Web_Content_Accessibility_Guidelines.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                                class="new"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=Talk:CKEditor_3.x/Accessibility_Compliance/Web_Content_Accessibility_Guidelines&amp;action=edit&amp;redlink=1"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Accessibility_Compliance/Web_Content_Accessibility_Guidelines&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Accessibility_Compliance/Web_Content_Accessibility_Guidelines&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../Accessibility_Compliance.1.html" title="CKEditor 3.x/Accessibility Compliance">Accessibility Compliance</a></span></div>
+                      <h1 id="mainHeader">Web Content Accessibility Guidelines</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>The full WCAG 1.0 checklist can be viewed in <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/full-checklist.html">W3C's website</a>.<br /> 
+</p>
+<h2><span class="mw-headline" id="Priority_1_Checkpoints">Priority 1 Checkpoints<br /></span></h2>
+<table width="100%" class="datatable">
+
+<tr>
+<th colspan="3"> In General (Priority 1)<br />
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-text-equivalent">1.1</a> Provide a text equivalent for every non-text element (e.g., via "alt", "longdesc", or in element content). This includes: images, graphical representations of text (including symbols), image map regions, animations (e.g., animated GIFs), applets and programmatic objects, ascii art, frames, scripts, images used as list bullets, spacers, graphical buttons, sounds (played with or without user interaction), stand-alone audio files, audio tracks of video, and video.<br />
+</td>
+<td> Yes<br />
+</td>
+<td> Important images, such as toolbar buttons and frequently used smiley icons, are provided with screenreader accessible alternate text.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-color-convey">2.1</a> Ensure that all information conveyed with color is also available without color, for example from context or markup. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> Toolbar buttons will appear as textual buttons in Windows high contrast mode. Selection of text and background colors is still possible with textual labels in the color selection panels. <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-identify-changes">4.1</a> Clearly identify changes in the natural language of a document's text and any text equivalents (e.g., captions). <br />
+</td>
+<td> Yes<br />
+</td>
+<td> The lang attribute is present in the editor's HTML container, dialogs and popup menus.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-order-style-sheets">6.1</a> Organize documents so they may be read without style sheets. For example, when an HTML document is rendered without associated style sheets, it must still be possible to read the document.<br />
+</td>
+<td> Yes<br />
+</td>
+<td> The editor and its dialogs are still usable without cascading style sheets. Toolbar buttons appear as textual links without CSS. <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-dynamic-source">6.2</a> Ensure that equivalents for dynamic content are updated when the dynamic content changes. <br />
+</td>
+<td> Yes<br />
+</td>
+<td>
+<ul><li>IFrames in the editor, such as the WYSIWYG editing area and combo boxes, are given screenreader accessible labels. <br /> </li>
+<li>An equivalent text-only page with a &lt;textarea&gt; element can be created by not activating CKEditor's replace API, if JavaScript is not an option.<br /></li></ul>
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-flicker">7.1</a> Until user agents allow users to control flickering, avoid causing the screen to flicker. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> There are no blinking or flickering contents in the editor. Moveable UI elements such as dialogs can only be moved in a smooth fashion by the user.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-simple-and-straightforward">14.1</a> Use the clearest and simplest language appropriate for a site's content. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> Accessible labels are kept as concise and simple simple as possible.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use images and image maps (Priority 1) <br />
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-redundant-server-links">1.2</a> Provide redundant text links for each active region of a server-side image map. <br />
+</td>
+<td> NA<br />
+</td>
+<td> There are no image maps in the editor. <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-client-side-maps">9.1</a> Provide client-side image maps instead of server-side image maps except where the regions cannot be defined with an available geometric shape.<br />
+</td>
+<td> NA<br />
+</td>
+<td> There are no image maps in the editor.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use tables (Priority 1) <br />
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-table-headers">5.1</a> For data tables, identify row and column headers. <br />
+</td>
+<td> NA<br />
+</td>
+<td> There are no data tables in the editor UI.Tables are used for layout purpose only.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-table-structure">5.2</a> For data tables that have two or more logical levels of row or column headers, use markup to associate data cells and header cells.<br />
+</td>
+<td> NA<br />
+</td>
+<td> There are no data tables in the editor UI.Tables are used for layout purpose only.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use frames (Priority 1) <br />
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-frame-titles">12.1</a> Title each frame to facilitate frame identification and navigation. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> IFrames in the editor, such as the WYSIWYG editing area and combo boxes, are given screenreader accessible labels. <br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use applets and scripts (Priority 1) <br />
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-scripts">6.3</a> Ensure that pages are usable when scripts, applets, or other programmatic objects are turned off or not supported. If this is not possible, provide equivalent information on an alternative accessible page.<br />
+</td>
+<td> Yes<br />
+</td>
+<td> An equivalent text-only page with a &lt;textarea&gt; element can be created by not activating CKEditor's replace API, if JavaScript is not an option. <br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use multimedia (Priority 1) <br />
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-auditory-descriptions">1.3</a> Until user agents can automatically read aloud the text equivalent of a visual track, provide an auditory description of the important information of the visual track of a multimedia presentation.<br />
+</td>
+<td> NA<br />
+</td>
+<td> There are no video or audio contents in the editor. <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-synchronize-equivalents">1.4</a> For any time-based multimedia presentation (e.g., a movie or animation), synchronize equivalent alternatives (e.g., captions or auditory descriptions of the visual track) with the presentation.<br />
+</td>
+<td> NA<br />
+</td>
+<td> There are no video or audio contents in the editor.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if all else fails (Priority 1) <br />
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-alt-pages">11.4</a> If, after best efforts, you cannot create an accessible page, provide a link to an alternative page that uses W3C technologies, is accessible, has equivalent information (or functionality), and is updated as often as the inaccessible (original) page.<br />
+</td>
+<td> Yes<br />
+</td>
+<td> An equivalent text-only page with a &lt;textarea&gt; element can be created by not activating CKEditor's replace API, if JavaScript is not an option.<br />
+</td></tr></table>
+<h2><span class="mw-headline" id="Priority_2_Checkpoints">Priority 2 Checkpoints</span></h2>
+<table width="100%" class="datatable">
+
+<tr>
+<th colspan="3"> In General (Priority 2)
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-color-contrast">2.2</a> Ensure that foreground and background color combinations provide sufficient contrast when viewed by someone having color deficits or when viewed on a black and white screen. [Priority 2 for images, Priority 3 for text]. <br />
+</td>
+<td> Yes<br />
+</td>
+<td>
+<ul><li>Image elements in the editor UI are designed with good contrast to insure visibility in black and white screens.<br /> </li>
+<li>Textual elements in the editor UI have good contrast against the background color.<br /></li></ul>
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-use-markup">3.1</a> When an appropriate markup language exists, use markup rather than images to convey information. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-identify-grammar">3.2</a> Create documents that validate to published formal grammars. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> IFrame documents created by the editor are always displayed in standards compliant mode rather than quirks mode.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-style-sheets">3.3</a> Use style sheets to control layout and presentation. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-relative-units">3.4</a> Use relative rather than absolute units in markup language attribute values and style sheet property values. <br />
+</td>
+<td> No<br />
+</td>
+<td> px is used for sizing most UI elements.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-logical-headings">3.5</a> Use header elements to convey document structure and use them according to specification. <br />
+</td>
+<td> NA<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-list-structure">3.6</a> Mark up lists and list items properly. <br />
+</td>
+<td> NA<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-quotes">3.7</a> Mark up quotations. Do not use quotation markup for formatting effects such as indentation. <br />
+</td>
+<td> NA<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-fallback-page">6.5</a> Ensure that dynamic content is accessible or provide an alternative presentation or page. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> An equivalent text-only page with a &lt;textarea&gt; element can be created by not activating CKEditor's replace API, if JavaScript is not an option. <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-blinking">7.2</a> Until user agents allow users to control blinking, avoid causing content to blink (i.e., change presentation at a regular rate, such as turning on and off).<br />
+</td>
+<td> Yes<br />
+</td>
+<td> There are no blinking or flickering contents in the editor. Moveable UI elements such as dialogs can only be moved in a smooth fashion by the user.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-no-periodic-refresh">7.4</a> Until user agents provide the ability to stop the refresh, do not create periodically auto-refreshing pages. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> There is no auto-refresh logic in the editor.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-no-auto-forward">7.5</a> Until user agents provide the ability to stop auto-redirect, do not use markup to redirect pages automatically. Instead, configure the server to perform redirects.<br />
+</td>
+<td> Yes<br />
+</td>
+<td> There is no auto-redirect markup in the editor.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-pop-ups">10.1</a> Until user agents allow users to turn off spawned windows, do not cause pop-ups or other windows to appear and do not change the current window without informing the user.<br />
+</td>
+<td> Yes<br />
+</td>
+<td> All dialogs in the editor UI are floating dialogs displayed within the same page.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-latest-w3c-specs">11.1</a> Use W3C technologies when they are available and appropriate for a task and use the latest versions when supported. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-deprecated">11.2</a> Avoid deprecated features of W3C technologies. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-group-information">12.3</a> Divide large blocks of information into more manageable groups where natural and appropriate. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> Complicated dialogs are split into screenreader accessible tabbed pages.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-meaningful-links">13.1</a> Clearly identify the target of each link. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-use-metadata">13.2</a> Provide metadata to add semantic information to pages and sites. <br />
+</td>
+<td> NA<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-site-description">13.3</a> Provide information about the general layout of a site (e.g., a site map or table of contents). <br />
+</td>
+<td> NA<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-clear-nav-mechanism">13.4</a> Use navigation mechanisms in a consistent manner. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> Same or similar set of hotkeys (Tab, Shift-Tab, Alt-F10) are used in similar navigating actions in different UI elements.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use tables (Priority 2)
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-table-for-layout">5.3</a> Do not use tables for layout unless the table makes sense when linearized. Otherwise, if the table does not make sense, provide an alternative equivalent (which may be a linearized version).<br />
+</td>
+<td> No<br />
+</td>
+<td> Tables are used for layout in dialogs. Some of the current table layouts may not make sense when linearized.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-table-layout">5.4</a> If a table is used for layout, do not use any structural markup for the purpose of visual formatting. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use frames (Priority 2)
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-frame-longdesc">12.2</a> Describe the purpose of frames and how frames relate to each other if it is not obvious by frame titles alone. <br />
+</td>
+<td> NA<br />
+</td>
+<td> IFrames in the editor are dynamically generated and so it does not make sense to have a separate description section for them.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use forms (Priority 2)
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-unassociated-labels">10.2</a> Until user agents support explicit associations between labels and form controls, for all form controls with implicitly associated labels, ensure that the label is properly positioned.<br />
+</td>
+<td> Yes<br />
+</td>
+<td> Implicit labels (e.g. checkbox labels in dialogs) are always positioned next to the input widgets.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-associate-labels">12.4</a> Associate labels explicitly with their controls. <br />
+</td>
+<td> No<br />
+</td>
+<td> Some UI elements in the editor use implicit labels.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use applets and scripts (Priority 2)
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-keyboard-operable-scripts">6.4</a> For scripts and applets, ensure that event handlers are input device-independent. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> Most or all UI elements in the editor can be interacted with via mouse or keyboard.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-movement">7.3</a> Until user agents allow users to freeze moving content, avoid movement in pages. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> UI element or content movements in the editor can only be effected by the user.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-directly-accessible">8.1</a> Make programmatic elements such as scripts and applets directly accessible or compatible with assistive technologies [Priority 1 if functionality is important and not presented elsewhere, otherwise Priority 2.]<br />
+</td>
+<td> Yes<br />
+</td>
+<td> Device-independent JavaScript events (e.g. onclick for links which is also fired when user presses Enter) are used in the editor. In other cases, redundant input mechanisms are also provided.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-keyboard-operable">9.2</a> Ensure that any element that has its own interface can be operated in a device-independent manner. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-device-independent-events">9.3</a> For scripts, specify logical event handlers rather than device-dependent event handlers. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr></table>
+<h2><span class="mw-headline" id="Priority_3_Checkpoints">Priority 3 Checkpoints</span></h2>
+<table width="100%" class="datatable">
+
+<tr>
+<th colspan="3"> In General (Priority 3)
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-expand-abbr">4.2</a> Specify the expansion of each abbreviation or acronym in a document where it first occurs. <br />
+</td>
+<td> No<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-identify-lang">4.3</a> Identify the primary natural language of a document. <br />
+</td>
+<td> No<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-tab-order">9.4</a> Create a logical tab order through links, form controls, and objects. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> All user interactive controls in the editor UI have JavaScript-based tab order.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-keyboard-shortcuts">9.5</a> Provide keyboard shortcuts to important links (including those in client-side image maps), form controls, and groups of form controls.<br />
+</td>
+<td> Yes<br />
+</td>
+<td> Frequently used toolbar buttons, such as Bold and Undo, have keyboard shortcuts.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-divide-links">10.5</a> Until user agents (including assistive technologies) render adjacent links distinctly, include non-link, printable characters (surrounded by spaces) between adjacent links.<br />
+</td>
+<td> No<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-content-preferences">11.3</a> Provide information so that users may receive documents according to their preferences (e.g., language, content type, etc.) <br />
+</td>
+<td> Yes<br />
+</td>
+<td> The editor is able to detect the preferred language settings in the browser and display with the appropriate translation.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-nav-bar">13.5</a> Provide navigation bars to highlight and give access to the navigation mechanism. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-group-links">13.6</a> Group related links, identify the group (for user agents), and, until user agents do so, provide a way to bypass the group. <br />
+</td>
+<td> No<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-searches">13.7</a> If search functions are provided, enable different types of searches for different skill levels and preferences. <br />
+</td>
+<td> No<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-front-loading">13.8</a> Place distinguishing information at the beginning of headings, paragraphs, lists, etc. <br />
+</td>
+<td> NA<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-bundled-version">13.9</a> Provide information about document collections (i.e., documents comprising multiple pages.). <br />
+</td>
+<td> NA<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-skip-over-ascii">13.10</a> Provide a means to skip over multi-line ASCII art. <br />
+</td>
+<td> NA<br />
+</td>
+<td> There is no ASCII art in the editor UI.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-icons">14.2</a> Supplement text with graphic or auditory presentations where they will facilitate comprehension of the page. <br />
+</td>
+<td> No<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-consistent-style">14.3</a> Create a style of presentation that is consistent across pages. <br />
+</td>
+<td> Yes<br />
+</td>
+<td> The theme and skin systems in the editor ensures that different UI elements will have consistent styles.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use images and image maps (Priority 3)<br />
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-redundant-client-links">1.5</a> Until user agents render text equivalents for client-side image map links, provide redundant text links for each active region of a client-side image map.<br />
+</td>
+<td> NA<br />
+</td>
+<td> There are no image maps in the editor.<br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use tables (Priority 3)
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-table-summaries">5.5</a> Provide summaries for tables. <br />
+</td>
+<td> NA<br />
+</td>
+<td> Tables in the editor UI are only used for layout purposes.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-abbreviate-labels">5.6</a> Provide abbreviations for header labels. <br />
+</td>
+<td> NA<br />
+</td>
+<td> Tables in the editor UI are only used for layout purposes.<br />
+</td></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-linear-tables">10.3</a> Until user agents (including assistive technologies) render side-by-side text correctly, provide a linear text alternative (on the current page or some other) for all tables that lay out text in parallel, word-wrapped columns. <br />
+</td>
+<td> No<br />
+</td>
+<td> <br />
+</td></tr>
+<tr>
+<th colspan="3"> And if you use forms (Priority 3)
+</th></tr>
+<tr>
+<td> <a rel="nofollow" class="external text" href="http://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-place-holders">10.4</a> Until user agents handle empty controls correctly, include default, place-holding characters in edit boxes and text areas. <br />
+</td>
+<td> No<br />
+</td>
+<td> <br />
+</td></tr></table>
+
+<!-- 
+NewPP limit report
+Cached time: 20180629032456
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.036 seconds
+Real time usage: 0.038 seconds
+Preprocessor visited node count: 11/1000000
+Preprocessor generated node count: 16/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:734-0!*!*!!*!*!* and timestamp 20180629032456 and revision id 2712
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Accessibility_Compliance/Web_Content_Accessibility_Guidelines&amp;oldid=2712">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Accessibility_Compliance/Web_Content_Accessibility_Guidelines&amp;oldid=2712</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 29 September 2009, at 21:36.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

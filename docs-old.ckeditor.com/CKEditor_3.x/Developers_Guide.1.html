@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Developers Guide - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Developers_Guide","wgTitle":"CKEditor 3.x/Developers Guide","wgCurRevisionId":6769,"wgRevisionId":6769,"wgArticleId":720,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Developers_Guide","wgRelevantArticleId":720,"wgRequestId":"WzWpF6KAnWD1LUOOWkbaSAAAAJY","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Developers_Guide rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Developers_Guide.1.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FDevelopers+Guide">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Developers_Guide.1.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/Talk:CKEditor_3.x/Developers_Guide"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a></span></div>
+                      <h1 id="mainHeader">CKEditor 3.x Developer's Guide</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"> <div id="toc" class="toc"><div id="toctitle" class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Developers_Guide.1.html#CKEditor"><span class="tocnumber">1</span> <span class="toctext">CKEditor</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Developers_Guide.1.html#CKEditor_for_ASP.NET"><span class="tocnumber">2</span> <span class="toctext">CKEditor for ASP.NET</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="Developers_Guide.1.html#CKEditor_for_Java"><span class="tocnumber">3</span> <span class="toctext">CKEditor for Java</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="CKEditor">CKEditor</span></h2>
+<ul><li><a href="Developers_Guide/Installation.html" title="CKEditor 3.x/Developers Guide/Installation">Installation</a> </li>
+<li> Integration
+<ul><li><a href="Developers_Guide/Integration.html" title="CKEditor 3.x/Developers Guide/Integration">Integration</a> </li>
+<li> <a href="Developers_Guide/jQuery_Adapter.html" title="CKEditor 3.x/Developers Guide/jQuery Adapter">jQuery</a></li></ul></li>
+<li>Configuration 
+<ul><li><a href="Developers_Guide/Setting_Configurations.html" title="CKEditor 3.x/Developers Guide/Setting Configurations">Setting Configuration</a> </li>
+<li><a href="Developers_Guide/Toolbar.html" title="CKEditor 3.x/Developers Guide/Toolbar">Toolbar</a> </li>
+<li><a href="Developers_Guide/Styles.html" title="CKEditor 3.x/Developers Guide/Styles">Styles</a> </li>
+<li><a href="Developers_Guide/Output_Formatting.html" title="CKEditor 3.x/Developers Guide/Output Formatting">Output Formatting</a> </li>
+<li><a href="Developers_Guide/Templates.html" title="CKEditor 3.x/Developers Guide/Templates">Templates</a></li>
+<li>Spell Checker </li>
+<li><a href="Developers_Guide/File_Browser_(Uploader).html" title="CKEditor 3.x/Developers Guide/File Browser (Uploader)">File Browser/Uploader </a> </li></ul></li>
+<li> Tools
+<ul><li> <a href="Developers_Guide/CKPackager.html" title="CKEditor 3.x/Developers Guide/CKPackager">CKPackager &#8212; Compressing CKEditor Source</a></li>
+<li> <a href="Developers_Guide/CKReleaser.html" title="CKEditor 3.x/Developers Guide/CKReleaser">CKReleaser &#8212; Building a CKEditor Release </a></li></ul></li>
+<li>Customization 
+<ul><li><a href="Developers_Guide/Dialog_Customization.html" title="CKEditor 3.x/Developers Guide/Dialog Customization">Dialog Windows</a></li></ul></li>
+<li> Contribution
+<ul><li> <a href="Developers_Guide/Localization.html" title="CKEditor 3.x/Developers Guide/Localization">Localization</a>
+<ul><li> <a href="Developers_Guide/Localization_Teams.html" title="CKEditor 3.x/Developers Guide/Localization Teams">Joining a Localization Team</a></li>
+<li> <a href="Developers_Guide/Translating_CKEditor.html" title="CKEditor 3.x/Developers Guide/Translating CKEditor">Translating CKEditor</a></li>
+<li> <a href="Developers_Guide/Localization_Tips.html" title="CKEditor 3.x/Developers Guide/Localization Tips">Localization Tips</a></li>
+<li> <a href="Developers_Guide/Localization_Troubleshooting.html" title="CKEditor 3.x/Developers Guide/Localization Troubleshooting">Localization Troubleshooting</a></li>
+<li> <a href="Developers_Guide/Technical_Details_of_Localization.html" title="CKEditor 3.x/Developers Guide/Technical Details of Localization">Technical Details</a></li></ul></li>
+<li>Plugins </li>
+<li>Skins </li></ul></li>
+<li>Advanced Tasks
+<ul><li><a href="Developers_Guide/Editor_Core_URLs_Manipulation.html" title="CKEditor 3.x/Developers Guide/Editor Core URLs Manipulation">Editor Core URLs Manipulation</a></li>
+<li><a href="Developers_Guide/Data_Processor.html" title="CKEditor 3.x/Developers Guide/Data Processor">Data Processor: Data Input and Output Manipulation</a></li></ul></li>
+<li><a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/">JavaScript API</a> </li>
+<li><a href="https://docs-old.ckeditor.com/FCKeditor_3.x/Design_and_Architecture" title="FCKeditor 3.x/Design and Architecture">Design and Architecture</a></li></ul>
+<h2><span class="mw-headline" id="CKEditor_for_ASP.NET">CKEditor for ASP.NET</span></h2>
+<ul><li> <a href="Developers_Guide/ASP.NET/System_Requirements.html" title="CKEditor 3.x/Developers Guide/ASP.NET/System Requirements">System Requirements</a></li>
+<li> <a href="Developers_Guide/ASP.NET/Integration_Advanced.html" title="CKEditor 3.x/Developers Guide/ASP.NET/Integration Advanced">CKEditor for ASP.NET Integration Guide</a></li>
+<li> <a href="Developers_Guide/ASP.NET/Integration_Beginners.html" title="CKEditor 3.x/Developers Guide/ASP.NET/Integration Beginners">CKEditor for ASP.NET Integration Guide for Absolute Beginners</a></li>
+<li> <a href="Developers_Guide/ASP.NET/Samples.html" title="CKEditor 3.x/Developers Guide/ASP.NET/Samples">Using CKEditor for ASP.NET Samples</a></li>
+<li> <a href="Developers_Guide/ASP.NET/Configuration.html" title="CKEditor 3.x/Developers Guide/ASP.NET/Configuration">Setting CKEditor for ASP.NET Configuration</a></li></ul>
+<h2><span class="mw-headline" id="CKEditor_for_Java">CKEditor for Java</span></h2>
+<ul><li> <a href="Developers_Guide/Java/Integration.html" title="CKEditor 3.x/Developers Guide/Java/Integration">CKEditor for Java Integration Guide</a></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20180629024559
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.019 seconds
+Real time usage: 0.024 seconds
+Preprocessor visited node count: 19/1000000
+Preprocessor generated node count: 44/1000000
+Post‐expand include size: 667/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    7.524      1 -total
+ 61.30%    4.612      1 Template:CKEditor.NET_TOC
+ 36.10%    2.716      1 Template:CKEditor.Java_TOC
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:720-0!*!0!!en!*!* and timestamp 20180629024559 and revision id 6769
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide&amp;oldid=6769">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide&amp;oldid=6769</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 6 December 2011, at 15:18.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

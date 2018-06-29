@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Users Guide/Rich Text/Lists - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Users_Guide/Rich_Text/Lists","wgTitle":"CKEditor 3.x/Users Guide/Rich Text/Lists","wgCurRevisionId":5636,"wgRevisionId":5636,"wgArticleId":1313,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Users_Guide/Rich_Text/Lists","wgRelevantArticleId":1313,"wgRequestId":"WzWn49YnOloLqPIeTJLnrwAAAI0","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Users_Guide_Rich_Text_Lists rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Lists.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FUsers+Guide%2FRich+Text%2FLists">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Lists.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/Talk:CKEditor_3.x/Users_Guide/Rich_Text/Lists"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Rich_Text/Lists&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Rich_Text/Lists&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../../Users_Guide.html" title="CKEditor 3.x/Users Guide">Users Guide</a>&lrm; | <a href="../Rich_Text.html" title="CKEditor 3.x/Users Guide/Rich Text">Rich Text</a></span></div>
+                      <h1 id="mainHeader">Creating Lists</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>
+</p>
+<div id="toc" class="toc"><div id="toctitle" class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Lists.html#Bulleted_Lists"><span class="tocnumber">1</span> <span class="toctext">Bulleted Lists</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Lists.html#Creating_a_Bulleted_List"><span class="tocnumber">1.1</span> <span class="toctext">Creating a Bulleted List</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="Lists.html#Bulleted_List_Properties"><span class="tocnumber">1.2</span> <span class="toctext">Bulleted List Properties</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Lists.html#Nesting_Bulleted_Lists"><span class="tocnumber">1.3</span> <span class="toctext">Nesting Bulleted Lists</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="Lists.html#Removing_a_Bulleted_List"><span class="tocnumber">1.4</span> <span class="toctext">Removing a Bulleted List</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="Lists.html#Numbered_Lists"><span class="tocnumber">2</span> <span class="toctext">Numbered Lists</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="Lists.html#Creating_a_Numbered_List"><span class="tocnumber">2.1</span> <span class="toctext">Creating a Numbered List</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Lists.html#Numbered_List_Properties"><span class="tocnumber">2.2</span> <span class="toctext">Numbered List Properties</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="Lists.html#Nesting_Numbered_Lists"><span class="tocnumber">2.3</span> <span class="toctext">Nesting Numbered Lists</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="Lists.html#Removing_a_Numbered_List"><span class="tocnumber">2.4</span> <span class="toctext">Removing a Numbered List</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="Lists.html#Mixed_List_Types"><span class="tocnumber">3</span> <span class="toctext">Mixed List Types</span></a></li>
+</ul>
+</div>
+
+<p>Lists provide a way to structure text in a clear manner as well as group items that belong together. CKEditor lets you create two types of lists: bulleted (unordered) and numbered (ordered) lists.
+</p>
+<h2><span class="mw-headline" id="Bulleted_Lists">Bulleted Lists</span></h2>
+<p>Bulleted lists are useful when you want to group a number of items that do not need to appear in any particular order. 
+</p>
+<h3><span class="mw-headline" id="Creating_a_Bulleted_List">Creating a Bulleted List</span></h3>
+<p>To create a bulleted list, press the <a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist.png" class="image" title="Insert/Remove Bulleted List"><img alt="Insert/Remove Bulleted List" src="../../../images/b/b0/CKEditor_bulletedlist.png" width="12" height="13" /></a> button on the toolbar. A default list marker will appear at the beginning of the line of text that contains the cursor and the line will become indented. If you want to add further list items, press <i>Enter</i> on your keyboard. The cursor will move to the next line with a list marker placed at its beginning.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:261px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist_example.png" class="image"><img alt="" src="../../../images/9/94/CKEditor_bulletedlist_example.png" width="259" height="139" class="thumbimage" /></a>  <div class="thumbcaption">A bulleted list with default list markers inserted by CKEditor</div></div></div></div>
+<p><br />
+The list is continued automatically as long as you press <i>Enter</i> at the end of a line. If you want to suppress list creation, press <i>Enter</i> in an empty line with a list marker or click the <a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist.png" class="image" title="Insert/Remove Bulleted List"><img alt="Insert/Remove Bulleted List" src="../../../images/b/b0/CKEditor_bulletedlist.png" width="12" height="13" /></a> button again. The cursor will then move to the next, unindented paragraph.
+</p><p>Another method of adding a bulleted list is to select one or more paragraphs and press the <a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist.png" class="image" title="Insert/Remove Bulleted List"><img alt="Insert/Remove Bulleted List" src="../../../images/b/b0/CKEditor_bulletedlist.png" width="12" height="13" /></a> button on the toolbar. Each paragraph will then become a separate list item.
+</p>
+<h3><span class="mw-headline" id="Bulleted_List_Properties">Bulleted List Properties</span></h3>
+<p>In CKEditor you can customize the appearance of the bulleted list and modify the list marker. In order to change the list style, open the list context menu by clicking the right mouse button on a list item or using the <i>Menu/Application</i> key on your keyboard, and choose the <b>Bulleted List Properties</b> menu option.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:171px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist_contextmenu.png" class="image"><img alt="" src="../../../images/f/f2/CKEditor_bulletedlist_contextmenu.png" width="169" height="108" class="thumbimage" /></a>  <div class="thumbcaption">The bulleted list context menu with the Bulleted List Properties option</div></div></div></div>
+<p><br />
+The <b>Bulleted List Properties</b> dialog window lets you configure the appearance of the list marker.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:341px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist_properties.png" class="image"><img alt="" src="../../../images/4/4a/CKEditor_bulletedlist_properties.png" width="339" height="156" class="thumbimage" /></a>  <div class="thumbcaption">The Bulleted List Properties dialog window in CKEditor</div></div></div></div>
+<p><br />
+The <b>Type</b> drop-down list contains the following options:
+</p>
+<ul><li> <b>Circle</b> &#8211; the list marker becomes a round shape that is empty in the middle.</li>
+<li> <b>Disc</b> &#8211; the list marker becomes a round shape filled in the middle.</li>
+<li> <b>Square</b> &#8211; the list marker becomes a  four-sided shape filled in the middle.</li></ul>
+<h3><span class="mw-headline" id="Nesting_Bulleted_Lists">Nesting Bulleted Lists</span></h3>
+<p>Sometimes one list level is not enough to represent a more complicated structure of items. This is why CKEditor lets you add multiple levels of nesting to your bulleted lists.
+</p><p>To create a nested bulleted list, use the <b>Increase Indent</b> feature of CKEditor. Place the cursor in the line that should start the nested list and press the <a href="https://docs-old.ckeditor.com/File:CKEditor_indent.png" class="image" title="Increase Indent"><img alt="Increase Indent" src="../../../images/3/3e/CKEditor_indent.png" width="15" height="13" /></a> button on the toolbar. The list item will become indented and the list marker will change. The next item added to the list will have the same indentation as the previous one and thus become a part of the nested list.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:337px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist_nested_example.png" class="image"><img alt="" src="../../../images/9/9c/CKEditor_bulletedlist_nested_example.png" width="335" height="192" class="thumbimage" /></a>  <div class="thumbcaption">Nested bulleted lists added in CKEditor</div></div></div></div>
+<p><br />
+If you want to end the nested list and return to the previous indentation level, use the <b>Decrease Indent</b> feature of CKEditor. Place the cursor in the line that should be a continuation of the previous list and press the <a href="https://docs-old.ckeditor.com/File:CKEditor_outdent.png" class="image" title="Decrease Indent"><img alt="Decrease Indent" src="../../../images/a/a2/CKEditor_outdent.png" width="15" height="13" /></a> button on the toolbar. The indentation of the list item will decrease and the list marker will change back to the marker for a list of a higher level. 
+</p>
+<h3><span class="mw-headline" id="Removing_a_Bulleted_List">Removing a Bulleted List</span></h3>
+<p>If you want to remove list formatting, leaving the text of the list items intact, select the list in the document and press the <a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist.png" class="image" title="Insert/Remove Bulleted List"><img alt="Insert/Remove Bulleted List" src="../../../images/b/b0/CKEditor_bulletedlist.png" width="12" height="13" /></a> button on the toolbar. The list markers and indentation will be removed and each of the former list items will become a paragraph.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:266px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist_removed.png" class="image"><img alt="" src="../../../images/0/0b/CKEditor_bulletedlist_removed.png" width="264" height="157" class="thumbimage" /></a>  <div class="thumbcaption">Bulleted list formatting removed from the document in CKEditor</div></div></div></div>
+<h2><span class="mw-headline" id="Numbered_Lists">Numbered Lists</span></h2>
+<p>Numbered lists are useful when you want to group a number of items that need to appear in a particular order. They are perfectly suited for lists of procedures or step-by-step instructions.
+</p>
+<h3><span class="mw-headline" id="Creating_a_Numbered_List">Creating a Numbered List</span></h3>
+<p>To create a numbered list, press the <a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist.png" class="image" title="Insert/Remove Numbered List"><img alt="Insert/Remove Numbered List" src="../../../images/4/4b/CKEditor_numberedlist.png" width="13" height="14" /></a> button on the toolbar. A default numbered list marker will appear at the beginning of the line of text that contains the cursor and the line will become indented. If you want to add further list items, press <i>Enter</i> on your keyboard. The cursor will move to the next line with a list marker placed at its beginning.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:277px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist_example.png" class="image"><img alt="" src="../../../images/2/2d/CKEditor_numberedlist_example.png" width="275" height="135" class="thumbimage" /></a>  <div class="thumbcaption">A numbered list with default list markers inserted by CKEditor</div></div></div></div>
+<p><br />
+The list is continued automatically as long as you press <i>Enter</i> at the end of a line. If you want to suppress list creation, press <i>Enter</i> in an empty line with a list marker or click the <a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist.png" class="image" title="Insert/Remove Numbered List"><img alt="Insert/Remove Numbered List" src="../../../images/4/4b/CKEditor_numberedlist.png" width="13" height="14" /></a> button again. The cursor will then move to the next, unindented paragraph.
+</p><p>Another method of adding a numbered list is to select one or more paragraphs and press the <a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist.png" class="image" title="Insert/Remove Numbered List"><img alt="Insert/Remove Numbered List" src="../../../images/4/4b/CKEditor_numberedlist.png" width="13" height="14" /></a> button on the toolbar. Each paragraph will then become a separate list item.
+</p>
+<h3><span class="mw-headline" id="Numbered_List_Properties">Numbered List Properties</span></h3>
+<p>In CKEditor you can customize the appearance of the numbered list, its starting value, and the list marker. In order to change the list style, open the list context menu by clicking the right mouse button on a list item or using the <i>Menu/Application</i> key on your keyboard, and choose the <b>Numbered List Properties</b> menu option.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:185px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist_contextmenu.png" class="image"><img alt="" src="../../../images/6/6e/CKEditor_numberedlist_contextmenu.png" width="183" height="108" class="thumbimage" /></a>  <div class="thumbcaption">The numbered list context menu with the Numbered List Properties option</div></div></div></div>
+<p><br />
+The <b>Numbered List Properties</b> dialog window lets you configure the starting value and the list marker type. A numbered list can use decimal numbers, Roman numerals, or letters of the alphabet, in either lower or upper case. 
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:343px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist_properties.png" class="image"><img alt="" src="../../../images/c/c3/CKEditor_numberedlist_properties.png" width="341" height="186" class="thumbimage" /></a>  <div class="thumbcaption">The Numbered List Properties dialog window in CKEditor</div></div></div></div>
+<p>Below is an overview of all <b>Numbered List Properties</b> dialog window elements:
+</p>
+<ul><li> <b>Start</b> &#8211; the starting value for the list that will be used in the first list item. </li>
+<li> <b>Type</b> &#8211; the type of the list marker. The following options are available from the drop-down list:
+<ul><li> <b>Lower Roman</b> (i, ii, iii, iv, v, etc.)</li>
+<li> <b>Upper Roman</b> (I, II, III, IV, V, etc.)</li>
+<li> <b>Lower Alpha</b> (a, b, c, d, e, etc.)</li>
+<li> <b>Upper Alpha</b> (A, B, C, D, E, etc.)</li>
+<li> <b>Decimal</b> (1, 2, 3, 4, 5, etc.)</li></ul></li></ul>
+<h3><span class="mw-headline" id="Nesting_Numbered_Lists">Nesting Numbered Lists</span></h3>
+<p>Sometimes one list level is not enough to represent a more complicated structure of items. This is why CKEditor lets you add multiple levels of nesting to your numbered lists.
+</p><p>To create a nested numbered list, use the <b>Increase Indent</b> feature of CKEditor. Place the cursor in the line that should start the nested list and press the <a href="https://docs-old.ckeditor.com/File:CKEditor_indent.png" class="image" title="Increase Indent"><img alt="Increase Indent" src="../../../images/3/3e/CKEditor_indent.png" width="15" height="13" /></a> button on the toolbar. The list item will become indented and the next item added to the list will have the same indentation as the previous one, thus becoming a part of the nested list.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:333px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist_nested_example1.png" class="image"><img alt="" src="../../../images/6/65/CKEditor_numberedlist_nested_example1.png" width="331" height="193" class="thumbimage" /></a>  <div class="thumbcaption">Nested numbered lists added in CKEditor</div></div></div></div>
+<p><br />
+By default the nested numbered list will use the <b>Decimal</b> list marker type. To increase the readability of a  structure of nested numbered lists, you can assign each nesting level a different list marker. To achieve this, open the list context menu by clicking the right mouse button on a list item, and choose the <b>Numbered List Properties</b> menu option. The type selected from the <b>Type</b> drop-down list will be used for all list items at this nesting level.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:338px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist_nested_example2.png" class="image"><img alt="" src="../../../images/1/12/CKEditor_numberedlist_nested_example2.png" width="336" height="194" class="thumbimage" /></a>  <div class="thumbcaption">Nested numbered lists with different list markers added in CKEditor</div></div></div></div>
+<p><br />
+If you want to end a nested list and return to the previous indentation level, use the <b>Decrease Indent</b> feature of CKEditor. Place the cursor in the line that should be a continuation of the previous list, and press the <a href="https://docs-old.ckeditor.com/File:CKEditor_outdent.png" class="image" title="Decrease Indent"><img alt="Decrease Indent" src="../../../images/a/a2/CKEditor_outdent.png" width="15" height="13" /></a> button on the toolbar. The indentation of the list item will decrease and the list marker will change back to the marker for a list of a higher level. 
+</p>
+<h3><span class="mw-headline" id="Removing_a_Numbered_List">Removing a Numbered List</span></h3>
+<p>If you want to remove list formatting, leaving the text of the list items intact, select the list in the document and click the <a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist.png" class="image" title="Insert/Remove Numbered List"><img alt="Insert/Remove Numbered List" src="../../../images/4/4b/CKEditor_numberedlist.png" width="13" height="14" /></a> button on the toolbar. The list markers and indentation will be removed and each list item will become a separate paragraph.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:285px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist_removed.png" class="image"><img alt="" src="../../../images/b/b3/CKEditor_numberedlist_removed.png" width="283" height="155" class="thumbimage" /></a>  <div class="thumbcaption">Numbered list formatting removed from the document in CKEditor</div></div></div></div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Mixed_List_Types">Mixed List Types</span></h2>
+<p>For a particularly complicated structure of items you may want to combine bulleted and numbered lists of various indentation levels. Experiment with the <a href="https://docs-old.ckeditor.com/File:CKEditor_bulletedlist.png" class="image" title="Insert/Remove Bulleted List"><img alt="Insert/Remove Bulleted List" src="../../../images/b/b0/CKEditor_bulletedlist.png" width="12" height="13" /></a>, <a href="https://docs-old.ckeditor.com/File:CKEditor_numberedlist.png" class="image" title="Insert/Remove Numbered List"><img alt="Insert/Remove Numbered List" src="../../../images/4/4b/CKEditor_numberedlist.png" width="13" height="14" /></a>, <a href="https://docs-old.ckeditor.com/File:CKEditor_indent.png" class="image" title="Increase Indent"><img alt="Increase Indent" src="../../../images/3/3e/CKEditor_indent.png" width="15" height="13" /></a> and <a href="https://docs-old.ckeditor.com/File:CKEditor_outdent.png" class="image" title="Decrease Indent"><img alt="Decrease Indent" src="../../../images/a/a2/CKEditor_outdent.png" width="15" height="13" /></a> buttons to create a combination that accurately represents your data.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:434px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_mixedlist_example.png" class="image"><img alt="" src="../../../images/2/2b/CKEditor_mixedlist_example.png" width="432" height="225" class="thumbimage" /></a>  <div class="thumbcaption">A complicated structure of nested bulleted and numbered lists</div></div></div></div>
+
+<!-- 
+NewPP limit report
+Cached time: 20180629031734
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.067 seconds
+Real time usage: 0.071 seconds
+Preprocessor visited node count: 45/1000000
+Preprocessor generated node count: 56/1000000
+Post‐expand include size: 60/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:1313-0!*!*!!en!5!* and timestamp 20180629031734 and revision id 5636
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Rich_Text/Lists&amp;oldid=5636">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Rich_Text/Lists&amp;oldid=5636</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 13 December 2010, at 13:47.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

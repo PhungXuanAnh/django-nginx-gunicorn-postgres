@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Developers Guide/File Browser (Uploader)/Dialogs - Adding File Browser - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Developers_Guide/File_Browser_(Uploader)/Dialogs_-_Adding_File_Browser","wgTitle":"CKEditor 3.x/Developers Guide/File Browser (Uploader)/Dialogs - Adding File Browser","wgCurRevisionId":5851,"wgRevisionId":5851,"wgArticleId":767,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Developers_Guide/File_Browser_(Uploader)/Dialogs_-_Adding_File_Browser","wgRelevantArticleId":767,"wgRequestId":"WzWpQqKAnWD1LUOOWkbanQAAAIk","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Developers_Guide_File_Browser_Uploader_Dialogs_-_Adding_File_Browser rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Dialogs_-_Adding_File_Browser.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FDevelopers+Guide%2FFile+Browser+%28Uploader%29%2FDialogs+-+Adding+File+Browser">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Dialogs_-_Adding_File_Browser.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                                class="new"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=Talk:CKEditor_3.x/Developers_Guide/File_Browser_(Uploader)/Dialogs_-_Adding_File_Browser&amp;action=edit&amp;redlink=1"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/File_Browser_(Uploader)/Dialogs_-_Adding_File_Browser&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/File_Browser_(Uploader)/Dialogs_-_Adding_File_Browser&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../../Developers_Guide.1.html" title="CKEditor 3.x/Developers Guide">Developers Guide</a>&lrm; | <a href="../File_Browser_(Uploader).html" title="CKEditor 3.x/Developers Guide/File Browser (Uploader)">File Browser (Uploader)</a></span></div>
+                      <h1 id="mainHeader">Dialogs - Adding File Browser</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>CKEditor can be easily integrated with your own file browser.
+</p><p>To connect already compatible file browser with CKEditor (like <a rel="nofollow" class="external text" href="http://ckfinder.com">CKFinder</a>), simply follow the <a href="../File_Browser_(Uploader).html" title="CKEditor 3.x/Developers Guide/File Browser (Uploader)">File Browser (Uploader)</a> documentation.
+</p>
+<h2><span class="mw-headline" id="Dialogs">Dialogs</span></h2>
+<p>Please refer to the <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.dialog.dialogDefinition.html">CKEditor API documentation</a> for general help on how to create a dialog box.
+</p>
+<h2><span class="mw-headline" id="Filebrowser_Plugin">Filebrowser Plugin</span></h2>
+<p>The filebrowser plugin is built-in into CKEditor. It's only purpose is to provide an API inside of CKEditor to easily integrate any external file browser with it and to add file browser features to various CKEditor components (usually to dialogs).
+</p>
+<h3><span class="mw-headline" id="Adding_.22Browse_Server.22_button">Adding "Browse Server" button</span></h3>
+<p>To assign the filebrowser plugin to an element inside of a dialog box, set the "filebrowser" property.
+For example in <i>_source/plugins/image/dialogs/image.js</i> there is:
+</p>
+<pre>
+{
+	type&#160;: 'button',
+	hidden&#160;: true,
+	id&#160;: 'browse',
+	filebrowser&#160;: 'Link:txtUrl',
+	label&#160;: editor.lang.common.browseServer,
+	style&#160;: 'float:right',
+},
+</pre>
+<p>This button will be hidden by default (<code>hidden:true</code>). The filebrowser plugin looks for all elements with the filebrowser attribute and unhides them
+if appropriate configuration setting is available (<a href="../File_Browser_(Uploader).html#Basic_Configuration" title="CKEditor 3.x/Developers Guide/File Browser (Uploader)">filebrowserBrowseUrl/filebrowserUploadUrl</a>).
+</p><p>The action performed by the filebrowser plugin depends on the element type, 
+for <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.ui.dialog.fileButton.html">fileButton</a> it is <b>QuickUpload</b>, for other elements the default action is <b>Browse</b>.
+In the example above, the file browser will be launched (in a popup) when button is clicked.
+</p><p>The <code>'Link:txtUrl'</code> value instructs the filebrowser plugin to update an element
+with id <code>txtUrl</code> inside of the <code>Link</code> tab when <code>CKEDITOR.tools.callFunction(funcNum)</code> is called (see <a href="Custom_File_Browser.html" title="CKEditor 3.x/Developers Guide/File Browser (Uploader)/Custom File Browser">Custom File Browser</a>).
+</p>
+<h3><span class="mw-headline" id="Adding_.22Quick_Upload.22_support">Adding "Quick Upload" support</span></h3>
+<p>Again, to see how we can handle file uploads in our dialog box, we'll use working example from CKEditor.
+In <i>_source/plugins/image/dialogs/image.js</i> there is a definition of the <code>Upload</code> tab:
+</p>
+<pre>
+{
+	id&#160;: 'Upload',
+	hidden&#160;: true,
+	filebrowser&#160;: 'uploadButton',
+	label&#160;: editor.lang.image.upload,
+	elements&#160;:
+		[
+			{
+				type&#160;: 'file',
+				id&#160;: 'upload',
+				label&#160;: editor.lang.image.btnUpload,
+				style: 'height:40px',
+				size&#160;: 38
+			},
+			{
+				type&#160;: 'fileButton',
+				id&#160;: 'uploadButton',
+				filebrowser&#160;: 'info:txtUrl',
+				label&#160;: editor.lang.image.btnUpload,
+				'for'&#160;: [ 'Upload', 'upload' ]
+			}
+		]
+	},
+</pre>
+<p>This example is a little bit more complicated than the previous one, because 1) we have here a definition of the whole tab 2) we need two elements: <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.ui.dialog.file.html">file</a> and <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.ui.dialog.fileButton.html">fileButton</a> to upload a file.
+</p><p>In the example above, the id of a tab is <code>'Upload'</code>. It is hidden by default (<code>hidden:true</code>). As already mentioned, the filebrowser plugin looks for all elements with the filebrowser attribute and unhides them
+if appropriate configuration setting is available (<a href="../File_Browser_(Uploader).html#Basic_Configuration" title="CKEditor 3.x/Developers Guide/File Browser (Uploader)">filebrowserBrowseUrl/filebrowserUploadUrl</a>).
+In this case, the tab will be unhidden automatically if a filebrowser setting for <code>'uploadButton'</code> (because of <code>filebrowser:'uploadButton'</code>) will be available (<code>filebrowserUploadUrl</code>).
+</p><p>The <code>file</code> element is simple and doesn't need to be explained, it is just an input element that will store the name of a file that will be uploaded.
+</p><p>The <code>fileButton</code> element is more interesting. The <code>'info:txtUrl'</code> value instructs the filebrowser plugin to update an element
+with id <code>txtUrl</code> inside of the <code>info</code> tab when <code>CKEDITOR.tools.callFunction(funcNum)</code> is called (see <a href="Custom_File_Browser.html" title="CKEditor 3.x/Developers Guide/File Browser (Uploader)/Custom File Browser">Custom File Browser</a>). The <code>'for'&#160;: [ 'Upload', 'upload' ]</code> line is used to connect fileButton with file element. It is an instruction for CKEditor to upload a file using the <code>'file'</code> element with id <code>'upload'</code> (second value) inside of the <code>'Upload'</code> tab (first value).
+</p>
+<h3><span class="mw-headline" id="Advanced_configuration_.28Browsing.29">Advanced configuration (Browsing)</span></h3>
+<p>It is possible to define your own function that will be called when file is selected/uploaded.
+</p>
+<pre>
+{
+        type&#160;: 'button',
+        hidden&#160;: true,
+        id&#160;: 'id0',
+        label&#160;: editor.lang.common.browseServer,
+        filebrowser&#160;:
+        {
+                action&#160;: 'Browse',
+                // target&#160;: 'tab1:id1',
+                onSelect&#160;: function( fileUrl, data ) 
+                {
+                        alert( 'The selected file URL is "' + fileUrl + '"' );
+
+                        for ( var _info in data )
+                                alert( 'data[ "' + _info + '" ]' + ' = ' + data[ _info ] );
+
+                        var dialog = this.getDialog();
+                        dialog.getContentElement( 'tab1', 'id1' ).setValue( data[ 'fileUrl' ] );
+                        
+                        // Do not call the built-in onSelect command 
+                        return false;
+                }
+        }
+}
+</pre>
+<p>In this example we're setting the action to 'Browse' to call the file browser when button is clicked.
+<code>'target'</code> is not required, because we'll update the target element in the custom <code>onSelect</code> function.
+</p><p>As explained in the <a href="Custom_File_Browser.html" title="CKEditor 3.x/Developers Guide/File Browser (Uploader)/Custom File Browser">documentation</a>, we have called <code>CKEDITOR.tools.callFunction(funcNum, fileUrl, data);</code> when user selected a file.
+The fileUrl and data arguments are passed to our custom <code>onSelect</code> function and we can use it to update the target element. 
+</p>
+<h3><span class="mw-headline" id="Advanced_configuration_.28Quick_Uploads.29">Advanced configuration (Quick Uploads)</span></h3>
+<p>In a similar way like we configured the button to open the file browser, we can configure the fileButton.
+</p>
+<pre>
+{
+        type&#160;: 'file',
+        label&#160;: editor.lang.common.upload,
+        labelLayout&#160;: 'vertical',
+        id&#160;: 'id2'
+},
+{
+        type&#160;: 'fileButton',
+        label&#160;: editor.lang.common.uploadSubmit,
+        id&#160;: 'id3',
+        filebrowser&#160;:
+        {
+                action&#160;: 'QuickUpload',
+                params&#160;: { type&#160;: 'Files', currentFolder&#160;: '/folder/' },
+                target&#160;: 'tab1:id1',
+                onSelect&#160;: function( fileUrl, errorMessage ) 
+                {
+                        alert( 'The url of uploaded file is: ' + fileUrl + '\nerrorMessage: ' + errorMessage );
+                        // Do not call the built-in onSelect command
+                        // return false;
+                }
+        },
+        'for'&#160;: [ 'tab1', 'id2' ]
+}
+</pre>
+<p>In the <code>filebrowser.params</code> attribute we can add additional arguments to be passed in the query string to the external file browser.
+<code>filebrowser.target</code> is the target element to be updated when file is returned by the server connector (uploader) - we don't need it if we define our own <code>onSelect</code> function (<code>filebrowser.onSelect</code>) and update the target element in this function, just like we did in previous example.
+</p><p><br />
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180629033635
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.017 seconds
+Real time usage: 0.020 seconds
+Preprocessor visited node count: 53/1000000
+Preprocessor generated node count: 108/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:767-0!*!0!!*!*!* and timestamp 20180629033635 and revision id 5851
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/File_Browser_(Uploader)/Dialogs_-_Adding_File_Browser&amp;oldid=5851">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/File_Browser_(Uploader)/Dialogs_-_Adding_File_Browser&amp;oldid=5851</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 27 February 2011, at 20:32.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

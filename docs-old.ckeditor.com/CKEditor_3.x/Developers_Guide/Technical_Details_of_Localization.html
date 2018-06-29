@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Developers Guide/Technical Details of Localization - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Developers_Guide/Technical_Details_of_Localization","wgTitle":"CKEditor 3.x/Developers Guide/Technical Details of Localization","wgCurRevisionId":7271,"wgRevisionId":7271,"wgArticleId":2171,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Developers_Guide/Technical_Details_of_Localization","wgRelevantArticleId":2171,"wgRequestId":"WzWpLjrlY5j3QVGyn28OaAAAAEU","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Developers_Guide_Technical_Details_of_Localization rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Technical_Details_of_Localization.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FDevelopers+Guide%2FTechnical+Details+of+Localization">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Technical_Details_of_Localization.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                                class="new"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=Talk:CKEditor_3.x/Developers_Guide/Technical_Details_of_Localization&amp;action=edit&amp;redlink=1"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Technical_Details_of_Localization&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Technical_Details_of_Localization&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../Developers_Guide.1.html" title="CKEditor 3.x/Developers Guide">Developers Guide</a></span></div>
+                      <h1 id="mainHeader">Technical Details of the CKEditor Localization</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"> <div id="toc" class="toc"><div id="toctitle" class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Technical_Details_of_Localization.html#When_Will_My_Translation_Be_Published.3F"><span class="tocnumber">1</span> <span class="toctext">When Will My Translation Be Published?</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Technical_Details_of_Localization.html#Why_Are_.PO_Files_Used_in_Tansifex.3F"><span class="tocnumber">2</span> <span class="toctext">Why Are .PO Files Used in Tansifex?</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="Technical_Details_of_Localization.html#What_Does_it_Mean_to_Me.3F"><span class="tocnumber">2.1</span> <span class="toctext">What Does it Mean to Me?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="Technical_Details_of_Localization.html#How_Can_I_Immediately_Test_New_Translations.3F"><span class="tocnumber">3</span> <span class="toctext">How Can I Immediately Test New Translations?</span></a></li>
+</ul>
+</div>
+
+<p>In the article below you will learn:
+</p>
+<ol><li> How often translations are ported from Transifex to CKEditor;</li>
+<li> Why gettext <code>.po</code> files are used in the CKEditor localization project;</li>
+<li> How to manually test new translations.</li></ol>
+<h2><span class="mw-headline" id="When_Will_My_Translation_Be_Published.3F">When Will My Translation Be Published?</span></h2>
+<p>Below is a simple diagram that shows when the language strings added in Transifex will land in a new CKEditor release.
+</p><p><a rel="nofollow" class="external free" href="http://a.cksource.com/c/1/inc/img/transifex/diagram.png">http://a.cksource.com/c/1/inc/img/transifex/diagram.png</a>
+</p><p>Once generated, the development snapshot is immediately published on the <a rel="nofollow" class="external text" href="http://nightly.ckeditor.com/">CKEditor Nightly Website</a>.
+The whole process takes up to 24 hours, so after updating the translation, the next day you can download a development snapshot that will contain updated files. You can then test if everything works as expected.
+</p>
+<div class="note"><div class="floatleft"><a title="Important note" class="image" href="https://docs-old.ckeditor.com/File:Warning_blue.png"><img width="30" height="30" border="0" src="../../images/thumb/8/81/Warning_blue.png/30px-Warning_blue.png" alt="important note"></a></div>
+Please note that the <i>development shapshot</i> is exactly what the name implies. For a production environment it is more advisable to wait for the next stable release with updated language files.</div>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Why_Are_.PO_Files_Used_in_Tansifex.3F">Why Are .PO Files Used in Tansifex?</span></h2>
+<p>CKEditor is a browser-based WYSIWYG editor written in JavaScript. The language files used by CKEditor are also JavaScript files. This is the best option performance-wise.
+</p><p>For many translators working with JavaScript source code was not comfortable. Storing text in plain JavaScript files meant that the translator had to know how to code in JavaScript &#8212; strings had to be escaped properly, multiline strings had to be written in a special way etc. JavaScript language files are in fact small programs, for example the language file for the <code>a11yhelp</code> plugin calls a function:
+</p>
+<pre class="code2highlight lang-javascript">CKEDITOR.plugins.setLang( 'a11yhelp', 'he', {
+	accessibilityHelp&#160;: {
+	...
+	}
+}</pre>
+<p>All the issues mentioned above as well as the very specific format of the language files used by CKEditor core and plugins lead to the conclusion that a simplified intermediate format (<code>gettext</code>) is needed to make the localization process more straightforward and the integration with Transifex easier.
+</p>
+<h3><span class="mw-headline" id="What_Does_it_Mean_to_Me.3F">What Does it Mean to Me?</span></h3>
+<p>In the CKEditor localization project at Transifex you only have access to  the <code>gettext</code> (<code>.po</code>) files. It means that for example if you download a resource for offline translation, you will get a <code>.po</code> file, not a JavaScript file. You can load this file into your favorite <code>.po</code> file editor like <a rel="nofollow" class="external text" href="http://projects.gnome.org/gtranslator/">Gtranslator</a>, <a rel="nofollow" class="external text" href="http://userbase.kde.org/Lokalize">Lokalize</a>, or <a rel="nofollow" class="external text" href="http://www.poedit.net/">Poedit</a> for offline translation, but you cannot use it directly with CKEditor.
+</p>
+<h2><span class="mw-headline" id="How_Can_I_Immediately_Test_New_Translations.3F">How Can I Immediately Test New Translations?</span></h2>
+<p>At some stage you may want to immediately check if your translation fits into the place where it is used.
+As explained above, the propagation of changes between Transifex and the CKEditor nightly build takes up to 24 hours. If you have doubts regarding the string context, make sure to always check the <b>Details</b> tab of a language string and read the <b>Developer comment</b> field to understand where the string is used.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:767px;"><a href="https://docs-old.ckeditor.com/File:Transifex_details_tab.png" class="image"><img alt="" src="../../images/d/d2/Transifex_details_tab.png" width="765" height="348" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://docs-old.ckeditor.com/File:Transifex_details_tab.png" class="internal" title="Enlarge"></a></div>The Details tab of a language string in Transifex</div></div></div></div>
+<p><br />
+If you are still unsure, you can also check the <b>Key</b>  in the <b>Details</b> tab. The <b>Key</b> is nothing else than the name of a variable that is used inside the JavaScript language files. 
+For example, the <code>common.url</code> key is equal to the following object:
+</p>
+<pre class="code2highlight lang-javascript">common&#160;:
+{
+	url&#160;: '...'
+}</pre>
+<p>After finding the right entry in the appropriate CKEditor language file (if you are translating the core, the language file is located in the <code>lang</code> folder), you may modify the string you are interested in. Save the file and launch CKEditor to see whether your translation fits the context and available space.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180628074931
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.033 seconds
+Real time usage: 0.035 seconds
+Preprocessor visited node count: 39/1000000
+Preprocessor generated node count: 92/1000000
+Post‐expand include size: 92/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:2171-0!*!*!!en!5!* and timestamp 20180628074931 and revision id 7271
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Technical_Details_of_Localization&amp;oldid=7271">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Technical_Details_of_Localization&amp;oldid=7271</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 28 February 2013, at 17:19.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

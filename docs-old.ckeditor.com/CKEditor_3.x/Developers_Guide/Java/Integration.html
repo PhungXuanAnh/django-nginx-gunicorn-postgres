@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Developers Guide/Java/Integration - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Developers_Guide/Java/Integration","wgTitle":"CKEditor 3.x/Developers Guide/Java/Integration","wgCurRevisionId":6443,"wgRevisionId":6443,"wgArticleId":2014,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Developers_Guide/Java/Integration","wgRelevantArticleId":2014,"wgRequestId":"WzWpODrlY5j3QVGyn28ObwAAAFA","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Developers_Guide_Java_Integration rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Integration.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FDevelopers+Guide%2FJava%2FIntegration">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Integration.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                                class="new"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=Talk:CKEditor_3.x/Developers_Guide/Java/Integration&amp;action=edit&amp;redlink=1"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Java/Integration&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Java/Integration&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../../Developers_Guide.1.html" title="CKEditor 3.x/Developers Guide">Developers Guide</a></span></div>
+                      <h1 id="mainHeader">CKEditor for Java Integration Guide</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle" class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Integration.html#System_Requirements"><span class="tocnumber">1</span> <span class="toctext">System Requirements</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Integration.html#Installation"><span class="tocnumber">2</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="Integration.html#Adding_Client-Side_CKEditor_Sources"><span class="tocnumber">2.1</span> <span class="toctext">Adding Client-Side CKEditor Sources</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Integration.html#Adding_Tag_Library_.28ckeditor-java-core.29"><span class="tocnumber">2.2</span> <span class="toctext">Adding Tag Library (ckeditor-java-core)</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="Integration.html#Using_Maven2"><span class="tocnumber">2.2.1</span> <span class="toctext">Using Maven2</span></a></li>
+<li class="toclevel-3 tocsection-6"><a href="Integration.html#Without_Maven"><span class="tocnumber">2.2.2</span> <span class="toctext">Without Maven</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="Integration.html#Using_the_Tag_on_the_Page"><span class="tocnumber">3</span> <span class="toctext">Using the Tag on the Page</span></a>
+<ul>
+<li class="toclevel-2 tocsection-8"><a href="Integration.html#Replacing_Selected_Textarea_Element"><span class="tocnumber">3.1</span> <span class="toctext">Replacing Selected Textarea Element</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="Integration.html#Replacing_All_Textarea_Elements"><span class="tocnumber">3.2</span> <span class="toctext">Replacing All Textarea Elements</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="Integration.html#Creating_a_CKEditor_Instance"><span class="tocnumber">3.3</span> <span class="toctext">Creating a CKEditor Instance</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Integration.html#Common_Tag_Attributes"><span class="tocnumber">3.4</span> <span class="toctext">Common Tag Attributes</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="Integration.html#basePath"><span class="tocnumber">3.4.1</span> <span class="toctext">basePath</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="Integration.html#config"><span class="tocnumber">3.4.2</span> <span class="toctext">config</span></a>
+<ul>
+<li class="toclevel-4 tocsection-14"><a href="Integration.html#New_CKEditor_3.6_Toolbar_Syntax"><span class="tocnumber">3.4.2.1</span> <span class="toctext">New CKEditor 3.6 Toolbar Syntax</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-15"><a href="Integration.html#timestamp"><span class="tocnumber">3.4.3</span> <span class="toctext">timestamp</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="Integration.html#initialized"><span class="tocnumber">3.4.4</span> <span class="toctext">initialized</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="Integration.html#events"><span class="tocnumber">3.4.5</span> <span class="toctext">events</span></a>
+<ul>
+<li class="toclevel-4 tocsection-18"><a href="Integration.html#Example:"><span class="tocnumber">3.4.5.1</span> <span class="toctext">Example:</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-19"><a href="Integration.html#globalEvents"><span class="tocnumber">3.4.6</span> <span class="toctext">globalEvents</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-20"><a href="Integration.html#Setting_configuration_options_in_a_Java_class"><span class="tocnumber">3.5</span> <span class="toctext">Setting configuration options in a Java class</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="System_Requirements">System Requirements</span></h2>
+<p>Please note that you need at least <strong> JRE 1.4 and Servlet 2.5/JSP 2.1</strong> to use the integration.
+</p>
+<h1><span class="mw-headline" id="Installation">Installation</span></h1>
+<p>Adding CKEditor to your application is a two-step process that entails:
+</p>
+<ol><li> downloading standalone CKEditor and placing it in the web application directory,</li>
+<li> downloading and installing the server-side integration (CKEditor for Java).</li></ol>
+<h2><span class="mw-headline" id="Adding_Client-Side_CKEditor_Sources">Adding Client-Side CKEditor Sources</span></h2>
+<p>Go to the <a rel="nofollow" class="external text" href="http://ckeditor.com/download">official CKEditor download site</a> and grab the latest version of CKEditor. Place it in the directory of your web application.
+</p>
+<h2><span class="mw-headline" id="Adding_Tag_Library_.28ckeditor-java-core.29">Adding Tag Library (ckeditor-java-core)</span></h2>
+<p>When you want to add the CKEditor library, you can choose between using Maven and adding it manually.
+</p>
+<h3><span class="mw-headline" id="Using_Maven2">Using Maven2</span></h3>
+<p>If your application uses Maven, you can add the following dependency to your <code>pom.xml</code> file:
+</p>
+<pre class="code2highlight lang-xml">&lt;dependency&gt;
+	&lt;groupId&gt;com.ckeditor&lt;/groupId&gt;
+	&lt;artifactId&gt;ckeditor-java-core&lt;/artifactId&gt;
+	&lt;version&gt;3.x.y&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+<p>Please note that <code>3.<i>x.y</i></code> denotes the artifact version, like <code>&lt;version&gt;3.6&lt;/version&gt;</code>.
+Since CKEditor releases are added to the central Maven repository, the specified version should be downloaded automatically.
+</p>
+<h3><span class="mw-headline" id="Without_Maven">Without Maven</span></h3>
+<p>If you do not use Maven, you have to add the CKEditor <code>jar</code> library manually. Go to the CKEditor download site, download the <code>ckeditor-java-core-<i>3.x.y*</i>.jar</code> file, and put it in your <code>/WEB-INF/lib</code> directory.
+</p><p><code>*</code> Please note that <code><i>3.x.y</i></code> denotes the version of a CKEditor release.
+</p>
+<h1><span class="mw-headline" id="Using_the_Tag_on_the_Page">Using the Tag on the Page</span></h1>
+<p>To start using <code>&lt;ckeditor&gt;</code> tags in your JSP page, you need to declare the CKEditor tag library inside it:
+</p>
+<pre class="code2highlight lang-java">&lt;%@ taglib uri=&quot;http://ckeditor.com&quot; prefix=&quot;ckeditor&quot;&#160;%&gt;</pre>
+<p>CKEditor replaces the HTML <code>textarea</code> element(s) with its instance(s). Unless you are using the <code>&lt;ckeditor:editor&gt;</code> tag (which will be described later), the first thing you need is a JSP page with an HTML <code>textarea</code> element.
+</p>
+<h3><span class="mw-headline" id="Replacing_Selected_Textarea_Element">Replacing Selected Textarea Element</span></h3>
+<p>For the purpose of this article let us assume that the page looks like this:
+</p>
+<pre class="code2highlight lang-html4strict">&lt;!DOCTYPE unspecified PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;%@page pageEncoding=&quot;UTF-8&quot; contentType=&quot;text/html; charset=UTF-8&quot;%&gt;
+&lt;html&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;sample_posteddata.jsp&quot; method=&quot;get&quot;&gt;
+			&lt;p&gt;
+				&lt;label for=&quot;editor1&quot;&gt;Editor 1:&lt;/label&gt;
+				&lt;textarea cols=&quot;80&quot; id=&quot;editor1&quot; name=&quot;editor1&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+			&lt;/p&gt;
+			&lt;p&gt;
+				&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+			&lt;/p&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;	
+&lt;/html&gt;</pre>
+<p>As seen in the code above, the <code>action</code> attribute of the <code>form</code> element contains the <code>sample_posteddata.jsp</code> value. This is a <code>web.xml</code> mapping that is used in the samples and points to a servlet that prints the contents of CKEditor, when the page is submitted.
+</p><p>Next you have to add the CKEditor tag (<code>&lt;ckeditor:replace&gt;</code> in this case) to the page. It is recommended to add it at the end, just before the closing <code>&lt;/body&gt;</code> tag:
+</p>
+<pre class="code2highlight lang-java">&lt;ckeditor:replace replace=&quot;editor1&quot; basePath=&quot;/ckeditor/&quot; /&gt;</pre>
+<p>Please note that the CKEditor tag above contains two attributes:
+</p>
+<ul><li> <code>replace</code> &#8211; points to the name or ID of the HTML <code>textarea</code> element that is to be replaced with a CKEditor instance.</li>
+<li> <code>basePath</code> &#8211; contains the path to the main CKEditor directory.</li></ul>
+<p>For the purpose of this document it is assumed that CKEditor is available in the <code>/ckeditor/</code> directory (<code>http://example.com/ckeditor/</code>).
+</p><p>Please note that other tag attributes are also available. Refer to the <a href="Integration.html#Common_Tag_Attributes" title="CKEditor 3.x/Developers Guide/Java/Integration">Common Tag Attributes</a> section below for a full description.
+</p><p>Below is the full source code of our sample page:
+</p>
+<pre class="code2highlight lang-html4strict">&lt;!DOCTYPE unspecified PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;%@page pageEncoding=&quot;UTF-8&quot; contentType=&quot;text/html; charset=UTF-8&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://ckeditor.com&quot; prefix=&quot;ckeditor&quot;&#160;%&gt;
+&lt;html&gt;
+	&lt;body&gt;
+		&lt;form action=&quot;sample_posteddata.jsp&quot; method=&quot;get&quot;&gt;
+			&lt;p&gt;
+				&lt;label for=&quot;editor1&quot;&gt;Editor 1:&lt;/label&gt;
+				&lt;textarea cols=&quot;80&quot; id=&quot;editor1&quot; name=&quot;editor1&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+			&lt;/p&gt;
+			&lt;p&gt;
+				&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+			&lt;/p&gt;
+		&lt;/form&gt;
+	&lt;ckeditor:replace replace=&quot;editor1&quot; basePath=&quot;/ckeditor/&quot; /&gt;
+	&lt;/body&gt;	
+&lt;/html&gt;</pre>
+<h3><span class="mw-headline" id="Replacing_All_Textarea_Elements">Replacing All Textarea Elements</span></h3>
+<p>The <code>&lt;ckeditor:replaceAll&gt;</code> tag replaces all <code>textarea</code> elements available in the document with editor instances. Optionally it can replace only the <code>textarea</code> elements that have a CSS class equal to the value of the CKEditor <code>className</code> attribute.
+</p>
+<pre class="code2highlight lang-java">&lt;ckeditor:replaceAll basePath=&quot;/ckeditor/&quot; className=&quot;myclass&quot;/&gt;</pre>
+<p>This tag changes all <code>textarea</code> elements with a CSS class of <code>myclass</code> to CKEditor instances.
+</p>
+<h3><span class="mw-headline" id="Creating_a_CKEditor_Instance">Creating a CKEditor Instance</span></h3>
+<p>The <code>&lt;ckeditor:editor&gt;</code> tag creates a CKEditor instance.
+</p>
+<pre class="code2highlight lang-java">&lt;ckeditor:editor textareaAttributes=&quot;&lt;%=attr&#160;%&gt;&quot; basePath=&quot;/ckeditor/&quot; editor=&quot;editor1&quot; value=&quot;Type here&quot; /&gt;</pre>
+<p>For this tag no HTML <code>textarea</code> element needs to be present on a page. It is created internally and immediately replaced with a CKEditor instance. The code above contains the following elements:
+</p>
+<ul><li> <code>basePath</code> &#8211; contains the path to the main CKEditor directory.</li>
+<li> <code>editor</code> &#8211; is the name of the internal <code>textarea</code> element. </li>
+<li> <code>value</code> &#8211; is the default <code>textarea</code> element value.</li>
+<li> <code>textareaAttributes</code> &#8211; is a <code>java.util.Map</code> with textarea attribute names serving as map keys, and attribute values serving as map values. For example:</li></ul>
+<pre class="code2highlight lang-java">&lt;% 
+	Map&lt;String, String&gt; attr = new HashMap&lt;String, String&gt;();
+	attr.put(&quot;rows&quot;, &quot;8&quot;);
+	attr.put(&quot;cols&quot;, &quot;50&quot;);
+%&gt;</pre>
+<h2><span class="mw-headline" id="Common_Tag_Attributes">Common Tag Attributes</span></h2>
+<p>The list below presents some of the commonly used tag attributes.
+</p>
+<h3><span class="mw-headline" id="basePath"><code>basePath</code></span></h3>
+<p><code>basePath</code> &#8211; contains the path to the main CKEditor directory.
+</p><p>If, for example, CKEditor is available under <code>http://example.com/3rdparty/ckeditor/</code>, the <code>basePath</code> attribute should be set to <code>/3rdparty/ckeditor/</code>.
+</p>
+<h3><span class="mw-headline" id="config"><code>config</code></span></h3>
+<p><code>config</code> &#8211; this parameter contains the CKEditor configuration object. For the list of available options, please refer to the <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html">JavaScript API</a>.
+</p><p>Configuration options are stored in the <code>CKEditorConfig</code> object. They are added by using the <code>addConfigValue</code> method:
+</p>
+<pre class="code2highlight lang-java">&lt;% 
+	CKEditorConfig settings = new CKEditorConfig();
+	settings.addConfigValue(&quot;width&quot;,&quot;500&quot;);
+%&gt;
+&lt;ckeditor:replace replace=&quot;editor1&quot; basePath=&quot;/ckeditor/&quot; config=&quot;&lt;%=settings&#160;%&gt;&quot; /&gt;</pre>
+<p>The first parameter of this method is always the name of a configuration option in the form of a string. The second one is the value of this option for which a String, Boolean, Number, List, or Map object can be used. No matter what type is used, CKEditor will try to map each value to an acceptable form. For example, the code below:
+</p>
+<pre class="code2highlight lang-java">&lt;% 
+	CKEditorConfig settings = new CKEditorConfig();
+	settings.addConfigValue(&quot;toolbar&quot;,&quot;[[ 'Source', '-', 'Bold', 'Italic' ]]&quot;);
+%&gt;</pre>
+<p>is equal to:
+</p>
+<pre class="code2highlight lang-java">&lt;% 
+	CKEditorConfig settings = new CKEditorConfig();
+	List&lt;List&lt;String&gt;&gt; list = new ArrayList&lt;List&lt;String&gt;&gt;();
+	List&lt;String&gt; subList = new ArrayList&lt;String&gt;();
+	subList.add(&quot;Source&quot;);
+	subList.add(&quot;-&quot;);
+	subList.add(&quot;Bold&quot;);
+	subList.add(&quot;Italic&quot;);
+	list.add(subList);
+	settings.addConfigValue(&quot;toolbar&quot;, list);
+%&gt;</pre>
+<h4><span class="mw-headline" id="New_CKEditor_3.6_Toolbar_Syntax">New CKEditor 3.6 Toolbar Syntax</span></h4>
+<p>As of CKEditor 3.6, toolbar buttons can be <a href="../Toolbar.html#Toolbar_Button_Groups" title="CKEditor 3.x/Developers Guide/Toolbar">organized into groups</a>. Each group has its own name and a set of buttons that it includes. The new definition can also be expressed in two ways.
+</p><p>The code below:
+</p>
+<pre class="code2highlight lang-java">&lt;%
+	CKEditorConfig settings = new CKEditorConfig();
+	settings.addConfigValue(&quot;toolbar&quot;,&quot;[{name: 'document', items: ['Source', '-', 'NewPage']},
+	'/', {name: 'styles', items: ['Styles','Format']} ]&quot;);
+%&gt;</pre>
+<p>is equal to:
+</p>
+<pre class="code2highlight lang-java">&lt;%
+	CKEditorConfig settings = new CKEditorConfig();
+	List&lt;Object&gt; mainList = new ArrayList&lt;Object&gt;();				
+	HashMap&lt;String, Object&gt; toolbarSectionMap = new HashMap&lt;String, Object&gt;();
+	List&lt;String&gt; subList = new ArrayList&lt;String&gt;();
+	subList.add(&quot;Source&quot;);
+	subList.add(&quot;-&quot;);
+	subList.add(&quot;NewPage&quot;);	
+	toolbarSectionMap.put(&quot;name&quot;, &quot;document&quot;);	
+	toolbarSectionMap.put(&quot;items&quot;, subList);	
+	mainList.add(toolbarSectionMap);		
+	mainList.add(&quot;/&quot;);
+	toolbarSectionMap = new HashMap&lt;String, Object&gt;();
+	subList = new ArrayList&lt;String&gt;();
+	subList.add(&quot;Styles&quot;);				
+	subList.add(&quot;Format&quot;);
+	toolbarSectionMap.put(&quot;name&quot;, &quot;styles&quot;);	
+	toolbarSectionMap.put(&quot;items&quot;, subList);
+	mainList.add(toolbarSectionMap);				
+	settings.addConfigValue(&quot;toolbar&quot;, mainList);
+%&gt;</pre>
+<h3><span class="mw-headline" id="timestamp"><code>timestamp</code></span></h3>
+<p><code>timestamp</code> &#8211; this parameter stores the value specific for a particular CKEditor release, which helps to avoid browser caching problems when a new client-side CKEditor version is uploaded to the server.
+</p>
+<h3><span class="mw-headline" id="initialized"><code>initialized</code></span></h3>
+<p><code>initialized</code> &#8211; setting this parameter to <code>true</code> means that the <code>ckeditor.js</code> script from CKEditor is already included in the page and there is no need to add it again. Setting it to <code>false</code>, on the other hand, means that the <code>ckeditor.js</code> script should be added to the page.
+</p>
+<h3><span class="mw-headline" id="events"><code>events</code></span></h3>
+<p><code>events</code> &#8211; this parameter stores the list of client-side event listeners and is of <code>com.ckeditor.EventHandler</code> type.
+</p>
+<h4><span class="mw-headline" id="Example:">Example:</span></h4>
+<p>Firstly, an instance of the <code>EventHandler</code> has to be created. Then you can add events by using the <code>addEvent</code> method, where the first parameter is the CKEditor event keyword and the second one is the JavaScript function in the form of a concatenated string.  
+</p>
+<pre class="code2highlight lang-java">&lt;% 
+	EventHandler eventHandler = new EventHandler();
+	eventHandler.addEvent(&quot;instanceReady&quot;,&quot;function (ev) { alert(\&quot;Loaded: \&quot; + ev.editor.name); }&quot;);
+%&gt;</pre>
+<p>In order to use the events on a page, the following expression can be added:
+</p>
+<pre class="code2highlight lang-java">&lt;ckeditor:editor basePath=&quot;/ckeditor/&quot; editor=&quot;editor1&quot; events=&quot;&lt;%=eventHandler&#160;%&gt;&quot;/&gt;</pre>
+<h3><span class="mw-headline" id="globalEvents"><code>globalEvents</code></span></h3>
+<p><code>globalEvents</code> &#8211; this parameter stores the list of client-side event listeners that are used by all CKEditor instances and is of <code>GlobalEventHandler</code> type.
+</p>
+<pre class="code2highlight lang-java">&lt;%
+	GlobalEventHandler globalEventHandler = new GlobalEventHandler();
+	globalEventHandler.addEvent(&quot;dialogDefinition&quot;,&quot;function (ev) { alert(\&quot;Loading dialog window: \&quot; + ev.data.name); }&quot;);
+%&gt;</pre>
+<h2><span class="mw-headline" id="Setting_configuration_options_in_a_Java_class">Setting configuration options in a Java class</span></h2>
+<p>Instances of the configuration, events, and global events can be created either in a scriptlet, or in a separated Java class. Here is an example:
+</p>
+<pre class="code2highlight lang-java">package com.ckeditor.samples;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.ckeditor.CKEditorConfig;
+import com.ckeditor.EventHandler;
+import com.ckeditor.GlobalEventHandler;
+
+public class ConfigurationHelper {
+
+	
+	public static CKEditorConfig createConfig() {
+		CKEditorConfig config = new CKEditorConfig();
+		List&lt;List&lt;String&gt;&gt; list = new ArrayList&lt;List&lt;String&gt;&gt;();
+		List&lt;String&gt; subList = new ArrayList&lt;String&gt;();
+		subList.add(&quot;Source&quot;);
+		subList.add(&quot;-&quot;);
+		subList.add(&quot;Bold&quot;);
+		subList.add(&quot;Italic&quot;);
+		list.add(subList);
+		config.addConfigValue(&quot;toolbar&quot;, list);
+		config.addConfigValue(&quot;width&quot;,&quot;500&quot;);
+		return config;
+	}
+	
+	public static EventHandler createEventHandlers() {
+		EventHandler handler = new EventHandler();
+		handler.addEvent(&quot;instanceReady&quot;,&quot;function (ev) { alert(\&quot;Loaded: \&quot; + ev.editor.name); }&quot;);
+		return handler;
+	}
+	
+	public static GlobalEventHandler createGlobalEventHandlers() {
+		GlobalEventHandler handler = new GlobalEventHandler();
+		handler.addEvent(&quot;dialogDefinition&quot;,&quot;function (ev) {  alert(\&quot;Loading dialog window: \&quot; + ev.data.name); }&quot;);
+		return handler;
+	}
+}</pre>
+<p>To access this class on a JSP page you can use the following expression:
+</p>
+<pre class="code2highlight lang-java">&lt;ckeditor:replace replace=&quot;editor1&quot; basePath=&quot;ckeditor/&quot;
+   config=&quot;&lt;%= ConfigurationHelper.createConfig()&#160;%&gt;&quot;
+   events=&quot;&lt;%= ConfigurationHelper.createEventHandlers()&#160;%&gt;&quot; /&gt;</pre>
+<p>
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180628074220
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.023 seconds
+Real time usage: 0.024 seconds
+Preprocessor visited node count: 247/1000000
+Preprocessor generated node count: 492/1000000
+Post‐expand include size: 81/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:2014-0!*!0!!en!*!* and timestamp 20180628074220 and revision id 6443
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Java/Integration&amp;oldid=6443">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Java/Integration&amp;oldid=6443</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 3 August 2011, at 10:06.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

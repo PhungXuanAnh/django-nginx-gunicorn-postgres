@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Users Guide/Interface/Context Menu - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Users_Guide/Interface/Context_Menu","wgTitle":"CKEditor 3.x/Users Guide/Interface/Context Menu","wgCurRevisionId":5607,"wgRevisionId":5607,"wgArticleId":1370,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Users_Guide/Interface/Context_Menu","wgRelevantArticleId":1370,"wgRequestId":"WzWnvtYnOloLqPIeTJLnigAAAIs","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Users_Guide_Interface_Context_Menu rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Context_Menu.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FUsers+Guide%2FInterface%2FContext+Menu">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Context_Menu.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                                class="new"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=Talk:CKEditor_3.x/Users_Guide/Interface/Context_Menu&amp;action=edit&amp;redlink=1"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Interface/Context_Menu&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Interface/Context_Menu&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../../Users_Guide.html" title="CKEditor 3.x/Users Guide">Users Guide</a>&lrm; | <a href="../Interface.html" title="CKEditor 3.x/Users Guide/Interface">Interface</a></span></div>
+                      <h1 id="mainHeader">Context Menu</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>The <b>Context Menu</b> is a pop-up menu that appears whenever you click inside the CKEditor <a href="Editing_Area.html" title="CKEditor 3.x/Users Guide/Interface/Editing Area">editing area</a> with the right mouse button, use the <i>Menu/Application</i> key on your keyboard, or the <i>Shift+F10</i> keyboard shortcut. It serves as a shortcut for most common operations available for a given type of object.
+</p><p>The image below presents the context menu for a link embedded in the document:
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:289px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_context_menu.png" class="image"><img alt="" src="../../../images/2/2c/CKEditor_context_menu.png" width="287" height="197" class="thumbimage" /></a>  <div class="thumbcaption">CKEditor's context menu for links</div></div></div></div>
+<p><br />
+The menu is context-sensitive which means that the options displayed in it depend on the object that you click.
+</p><p>If, for example, you press the right mouse button while inside a table, you will see some table-specific options available in its context menu.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:530px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_contextmenu_table.png" class="image"><img alt="" src="../../../images/8/8f/CKEditor_contextmenu_table.png" width="528" height="345" class="thumbimage" /></a>  <div class="thumbcaption">CKEditor's context menu for tables</div></div></div></div>
+<p><br />
+Note that for some more complex objects, like a table, the context menu might include sub-menus with further options. To open the sub-menu, go to the menu option containing a small right-pointing arrow (<a href="https://docs-old.ckeditor.com/File:CKEditor_contextmenu_arrow.png" class="image" title="arrow"><img alt="arrow" src="../../../images/c/c7/CKEditor_contextmenu_arrow.png" width="3" height="5" /></a>) and either click it with your mouse or use the <i>Right Arrow</i> key on your keyboard. To return to the parent menu, use your mouse or the <i>Left Arrow</i> key.
+</p><p>To perform an operation listed in the context menu, click it with the left mouse button. You can also move up and down the context menu with the <i>Up</i> and <i>Down Arrow</i> keys or the <i>Tab</i> and <i>Shift+Tab</i> combinations. Once an option is highlighted, you can activate it with the <i>Space</i> or <i>Enter</i> button. If an option is grayed out, like the <b>Cut</b> and <b>Copy</b> operations in the first screenshot, it is unavailable unless some pre-conditions are met (e.g. an element is selected).
+</p>
+<div class="note"><div class="floatleft"><a title="Important note" class="image" href="https://docs-old.ckeditor.com/File:Warning_blue.png"><img width="30" height="30" border="0" src="../../../images/thumb/8/81/Warning_blue.png/30px-Warning_blue.png" alt="important note"></a></div>
+In some environments and browsers clicking the right mouse button results in the browser context menu covering CKEditor context menu. If this is the case, press the <i>Esc</i> key once to close the browser context menu and reveal the CKEditor menu hidden below.</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20180629031839
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.034 seconds
+Real time usage: 0.038 seconds
+Preprocessor visited node count: 5/1000000
+Preprocessor generated node count: 28/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:1370-0!*!0!*!*!5!* and timestamp 20180629031839 and revision id 5607
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Interface/Context_Menu&amp;oldid=5607">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Interface/Context_Menu&amp;oldid=5607</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 13 December 2010, at 10:27.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

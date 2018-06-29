@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Developers Guide/jQuery Adapter - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Developers_Guide/jQuery_Adapter","wgTitle":"CKEditor 3.x/Developers Guide/jQuery Adapter","wgCurRevisionId":5932,"wgRevisionId":5932,"wgArticleId":790,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Developers_Guide/jQuery_Adapter","wgRelevantArticleId":790,"wgRequestId":"WzWpHOsQU@4itdTHpBuG8gAAABg","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Developers_Guide_jQuery_Adapter rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="jQuery_Adapter.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FDevelopers+Guide%2FjQuery+Adapter">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="jQuery_Adapter.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                                class="new"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=Talk:CKEditor_3.x/Developers_Guide/jQuery_Adapter&amp;action=edit&amp;redlink=1"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/jQuery_Adapter&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/jQuery_Adapter&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../Developers_Guide.1.html" title="CKEditor 3.x/Developers Guide">Developers Guide</a></span></div>
+                      <h1 id="mainHeader">jQuery Adapter</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>CKEditor offers native jQuery integration through its jQuery Adapter (a jQuery plugin basically). It provides deep integration of CKEditor into jQuery, using its native features.
+</p>
+<h2><span class="mw-headline" id="Creating_Editor_Instances">Creating Editor Instances</span></h2>
+<p>In order to create editor instances, load the usual CKEditor core script file as well as the jQuery Adapter file, in the following order:
+</p>
+<pre class="code2highlight">&lt;script type=&quot;text/javascript&quot; src=&quot;/ckeditor/ckeditor.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/ckeditor/adapters/jquery.js&quot;&gt;&lt;/script&gt;</pre>
+<p>At this point any <code>textarea</code>, <code>p</code>, or <code>div</code> element can be transformed into a rich text editor by using the <code>ckeditor()</code> method.
+</p>
+<pre class="code2highlight">$( 'textarea.editor' ).ckeditor();</pre>
+<p>Note that you can also make use of the jQuery chaining.
+</p>
+<pre class="code2highlight">$( '.section-x' )
+    .find( 'textarea.editor' )
+        .ckeditor()
+    .end()
+    .find( 'a' )
+        .addClass( 'mylink' )
+    .end();</pre>
+<p>The <code>ckeditor()</code> method is the main method of the jQuery adapter. It accepts two optional parameters:
+</p>
+<ul><li> A <b>callback function</b> to be executed when the editor is ready.</li>
+<li> <b>Configuration options</b> specific to the created editor instance.</li></ul>
+<p>The <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html">configuration options</a> are passed through a simple object that contains properties, each one related to a specific editor setting.
+</p>
+<pre class="code2highlight">$('.jquery_ckeditor')
+    .ckeditor( function() { /* callback code */ }, { skin&#160;: 'office2003' } )
+    .ckeditor( callback2 );</pre>
+<p>The code presented above will not create two editors. On discovering that one editor is already being created, it will wait with the second callback. Each of the callback functions will be executed in the context of the <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.editor.html">CKEDITOR.editor</a> object (so <code>this</code> will be the editor) and the DOM element object will be passed as parameter.
+</p>
+<h2><span class="mw-headline" id="Code_Interaction_with_Editor_Instances">Code Interaction with Editor Instances</span></h2>
+<p>When an editor instance is ready (after the callback call demonstrated above), the <code>ckeditorGet()</code> method can be used to retrieve the <code><a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.editor.html">CKEDITOR.editor</a></code> object that represents an editor instance. For example:
+</p>
+<pre class="code2highlight">var editor = $('.jquery_ckeditor').ckeditorGet();
+alert( editor.checkDirty() );</pre>
+<p>Because setting and retrieving the editor data is a common operation, the jQuery Adapter also provides a dedicated <code>val()</code> method that is an extension of the original jQuery <code>val()</code> method. This method works exactly the same as the jQuery version, but additionally it allows to get and set the editor contents.
+</p>
+<pre class="code2highlight">// Get the editor data.
+var data = $( 'textarea.editor' ).val();
+// Set the editor data.
+$( 'textarea.editor' ).val( 'my new content' );</pre>
+<p>This feature can be disabled by setting <code><a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.jqueryOverrideVal">CKEDITOR.config.jqueryOverrideVal</a></code> to false before loading the adapter code.
+</p><p>For <code>&lt;textarea&gt;</code> elements the editor will automatically return its content back to the form when it is submitted. CKEditor also automatically works with the official <a rel="nofollow" class="external text" href="http://jquery.malsup.com/form/">jQuery Form Plugin</a> for AJAX based forms. It does not require any action from the developer's side to support it.
+</p>
+<h2><span class="mw-headline" id="Event_handling">Event handling</span></h2>
+<p>Although CKEditor uses its own event system, there are four main events which are being exposed to the jQuery event system. All events use the event namespace, which is simply named <code>.ckeditor</code>.
+</p><p>The following events are available:
+</p>
+<ul><li> <code><strong>instanceReady.ckeditor</strong></code> &#8211; fired when the editor is created, but before any callback is being passed to the <code>ckeditor()</code> method.</li>
+<li> <code><strong>setData.ckeditor</strong></code> &#8211; fired when data is set in the editor.</li>
+<li> <code><strong>getData.ckeditor</strong></code> &#8211; fired when data is fetched from the editor. The current editor data is also passed in the arguments.</li>
+<li> <code><strong>destroy.ckeditor</strong></code> &#8211; fired when the editor gets destroyed. It can be used, for example, to execute some cleanup code on the page.</li></ul>
+<p>The editor instance is always passed as the first data argument for the listener. Both <code>getData</code> and <code>setData</code> are often used internally, so listening to them should be done with care.
+</p><p>jQuery events <i>do</i> bubble up through the DOM, so they can be listened to selectively in certain parts of the document.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180628194258
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.012 seconds
+Real time usage: 0.013 seconds
+Preprocessor visited node count: 65/1000000
+Preprocessor generated node count: 136/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:790-0!*!*!!*!*!* and timestamp 20180628194258 and revision id 5932
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/jQuery_Adapter&amp;oldid=5932">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/jQuery_Adapter&amp;oldid=5932</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 10 March 2011, at 16:14.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

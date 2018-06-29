@@ -237,3 +237,12 @@ CKEDITOR_CONFIGS = {
 ```
 
 # Cách sử dụng ckeditor để tạo 1 bài viết
+
+Xem đoạn text tạo sẵn để biết các tool hay dùng tại link này:
+http://127.0.0.1:8001/admin/polls/choice/1/change/
+
+
+Thao khảo: [CKEditor 3.x User's Guide](https://docs-old.ckeditor.com/CKEditor_3.x/Users_Guide)
+
+hoặc [CKEditor 3.x User's Guide backup](docs-old.ckeditor.com/CKEditor_3.x/Users_Guide.html)
+hoặc search với keywork: **CKEditor 3.x User's Guide**

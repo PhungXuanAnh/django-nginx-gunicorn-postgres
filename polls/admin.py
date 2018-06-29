@@ -5,8 +5,20 @@ from .models import Choice, Question
 
 @admin.register(Choice)
 class ChoiceAdmin(admin.ModelAdmin):
-    pass
+        # remove add permission
+    def has_add_permission(self, request):
+        return False  
+    
+    # remove delete permision
+    def has_delete_permission(self, request, obj=None):
+        return False  
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
-    pass
+        # remove add permission
+    def has_add_permission(self, request):
+        return False  
+    
+    # remove delete permision
+    def has_delete_permission(self, request, obj=None):
+        return False  

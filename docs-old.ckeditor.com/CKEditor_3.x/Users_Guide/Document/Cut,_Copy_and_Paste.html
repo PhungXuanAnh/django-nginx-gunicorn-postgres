@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Users Guide/Document/Cut, Copy and Paste - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Users_Guide/Document/Cut,_Copy_and_Paste","wgTitle":"CKEditor 3.x/Users Guide/Document/Cut, Copy and Paste","wgCurRevisionId":5622,"wgRevisionId":5622,"wgArticleId":1218,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Users_Guide/Document/Cut,_Copy_and_Paste","wgRelevantArticleId":1218,"wgRequestId":"WzWnytYnOloLqPIeTJLnkgAAAJc","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Users_Guide_Document_Cut_Copy_and_Paste rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Cut,_Copy_and_Paste.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FUsers+Guide%2FDocument%2FCut%2C+Copy+and+Paste">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Cut,_Copy_and_Paste.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                                class="new"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=Talk:CKEditor_3.x/Users_Guide/Document/Cut,_Copy_and_Paste&amp;action=edit&amp;redlink=1"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Document/Cut,_Copy_and_Paste&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Document/Cut,_Copy_and_Paste&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../../Users_Guide.html" title="CKEditor 3.x/Users Guide">Users Guide</a>&lrm; | <a href="../Document.html" title="CKEditor 3.x/Users Guide/Document">Document</a></span></div>
+                      <h1 id="mainHeader">Cut, Copy and Paste</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>Among the most common editing operations are cutting, copying, and pasting text. CKEditor not only supports these operations but also makes it possible to affect the formatting of the pasted text and even paste a Microsoft Word formatted fragment.
+</p><p>For general information on using dialog windows please refer to the <a href="../Interface/Dialog_Windows.html" title="CKEditor 3.x/Users Guide/Interface/Dialog Windows">Dialog Windows</a> section of the User's Guide.
+</p>
+<div class="note"><div class="floatleft"><a title="Important note" class="image" href="https://docs-old.ckeditor.com/File:Warning_blue.png"><img width="30" height="30" border="0" src="../../../images/thumb/8/81/Warning_blue.png/30px-Warning_blue.png" alt="important note"></a></div>
+Because the cut, copy and paste functions need access to the clipboard of your operating system, some Internet browsers either block it when called from CKEditor toolbar, or ask you to explicitly agree to that. Should accessing the clipboard by clicking the respective cut, copy and paste buttons from CKEditor toolbar or context menu options be blocked, you can always perform these operations with keyboard shortcuts.</div>
+<p><br />
+</p>
+<div id="toc" class="toc"><div id="toctitle" class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Cut,_Copy_and_Paste.html#Cut"><span class="tocnumber">1</span> <span class="toctext">Cut</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Cut,_Copy_and_Paste.html#Copy"><span class="tocnumber">2</span> <span class="toctext">Copy</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="Cut,_Copy_and_Paste.html#Paste"><span class="tocnumber">3</span> <span class="toctext">Paste</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="Cut,_Copy_and_Paste.html#Paste_from_Word"><span class="tocnumber">3.1</span> <span class="toctext">Paste from Word</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="Cut,_Copy_and_Paste.html#Paste_as_Plain_Text"><span class="tocnumber">3.2</span> <span class="toctext">Paste as Plain Text</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Cut">Cut</span></h2>
+<p>To cut a text fragment, start with selecting it. When the text is selected, you can cut it using one of the following methods:
+</p>
+<ul><li> Press the <a href="https://docs-old.ckeditor.com/File:CKEditor_cut.png" class="image" title="Cut"><img alt="Cut" src="../../../images/3/39/CKEditor_cut.png" width="14" height="16" /></a> button on the toolbar.</li>
+<li> Open the CKEditor context menu for the selected fragment by pressing the right mouse button, the <i>Menu/Application</i> key, or the <i>Shift+F10</i> keyboard shortcut, and choose the <b>Cut</b> command.</li>
+<li> Use the <i>Ctrl+X</i> shortcut on your keyboard. Note this method works even when the browser blocks CKEditor toolbar's access to the clipboard, so this is the most reliable way of cutting the text.</li></ul>
+<h2><span class="mw-headline" id="Copy">Copy</span></h2>
+<p>To copy a text fragment, start with selecting it. When the text is selected, you can copy it using one of the following methods:
+</p>
+<ul><li> Press the <a href="https://docs-old.ckeditor.com/File:CKEditor_copy.png" class="image" title="Copy"><img alt="Copy" src="../../../images/e/ed/CKEditor_copy.png" width="15" height="15" /></a> button on the toolbar.</li>
+<li> Open the CKEditor context menu for the selected fragment by pressing the right mouse button, the <i>Menu/Application</i> key, or the <i>Shift+F10</i> keyboard shortcut, and choose the <b>Copy</b> command.</li>
+<li> Use the <i>Ctrl+C</i> shortcut on your keyboard. Note this method works even when the browser blocks CKEditor toolbar's access to the clipboard, so this is the most reliable way of copying the text.</li></ul>
+<h2><span class="mw-headline" id="Paste">Paste</span></h2>
+<p>To paste a text fragment, start with cutting it or copying from another source. Depending on the security settings of your browser, you may either paste directly from the clipboard or use CKEditor <b>Paste</b> dialog window.
+</p><p>When the text is in the clipboard, you can paste it using one of the following methods:
+</p>
+<ul><li> Press the <a href="https://docs-old.ckeditor.com/File:CKEditor_paste.png" class="image" title="Paste"><img alt="Paste" src="../../../images/9/92/CKEditor_paste.png" width="15" height="15" /></a> button on the toolbar.</li>
+<li> Open the CKEditor context menu for the selected fragment by pressing the right mouse button, the <i>Menu/Application</i> key, or the <i>Shift+F10</i> keyboard shortcut, and choose the <b>Paste</b> command.</li>
+<li> Use the <i>Ctrl+V</i> shortcut on your keyboard. Note this method works even when the browser blocks CKEditor toolbar's access to the clipboard, so this is the most reliable way of pasting the text.</li></ul>
+<p>If direct access to clipboard is blocked, you will be asked to paste the text into the <b>Paste</b> dialog window using the <i>Ctrl+V</i> keyboard shortcut.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:394px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_paste_window.png" class="image"><img alt="" src="../../../images/4/41/CKEditor_paste_window.png" width="392" height="353" class="thumbimage" /></a>  <div class="thumbcaption">Paste dialog window of CKEditor</div></div></div></div>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="Paste_from_Word">Paste from Word</span></h3>
+<p>CKEditor allows you to preserve basic formatting when you paste a text fragment from Microsoft Word. To achieve this, copy the text in a Word document and paste it using one of the following methods:
+</p>
+<ul><li> Press the <a href="https://docs-old.ckeditor.com/File:CKEditor_paste_word.png" class="image" title="Paste from Word"><img alt="Paste from Word" src="../../../images/6/65/CKEditor_paste_word.png" width="15" height="14" /></a> button on the toolbar.</li>
+<li> Use the <i>Ctrl+V</i> shortcut on your keyboard. Note this method works even when the browser blocks CKEditor toolbar's access to the clipboard, so this is the most reliable way of pasting the text.</li></ul>
+<h3><span class="mw-headline" id="Paste_as_Plain_Text">Paste as Plain Text</span></h3>
+<p>If you want to paste an already formatted text, but without preserving the formatting, you can paste it as plain text. To achieve this, copy the formatted text and press the <a href="https://docs-old.ckeditor.com/File:CKEditor_paste_text.png" class="image" title="Paste as plain text"><img alt="Paste as plain text" src="../../../images/9/90/CKEditor_paste_text.png" width="15" height="15" /></a> button on the toolbar. If the browser blocks CKEditor toolbar's access to clipboard, a <b>Paste as Plain Text</b> dialog window will appear and you will be asked to paste the fragment into the text box using the<i> Ctrl+V</i> keyboard shortcut.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:392px;"><a href="https://docs-old.ckeditor.com/File:CKEditor_paste_text_popup.png" class="image"><img alt="" src="../../../images/b/be/CKEditor_paste_text_popup.png" width="390" height="347" class="thumbimage" /></a>  <div class="thumbcaption">Paste as Plain Text dialog window of CKEditor</div></div></div></div>
+<p><br />
+Once pasted into the document, the text will lose all its formatting and you will be able to style it using CKEditor options.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180628120820
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.050 seconds
+Real time usage: 0.052 seconds
+Preprocessor visited node count: 33/1000000
+Preprocessor generated node count: 58/1000000
+Post‐expand include size: 165/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    1.585      1 -total
+100.00%    1.585      1 Template:CKEditor_Dialog_Windows
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:1218-0!*!0!!en!5!* and timestamp 20180628120820 and revision id 5622
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Document/Cut,_Copy_and_Paste&amp;oldid=5622">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Users_Guide/Document/Cut,_Copy_and_Paste&amp;oldid=5622</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 13 December 2010, at 12:05.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

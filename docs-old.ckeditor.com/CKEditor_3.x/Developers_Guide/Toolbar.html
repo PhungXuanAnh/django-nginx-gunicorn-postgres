@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Developers Guide/Toolbar - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Developers_Guide/Toolbar","wgTitle":"CKEditor 3.x/Developers Guide/Toolbar","wgCurRevisionId":6870,"wgRevisionId":6870,"wgArticleId":756,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Developers_Guide/Toolbar","wgRelevantArticleId":756,"wgRequestId":"WzWpHj35r@OQ5VxhRJw8rwAAAQc","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Developers_Guide_Toolbar rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Toolbar.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FDevelopers+Guide%2FToolbar">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Toolbar.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/Talk:CKEditor_3.x/Developers_Guide/Toolbar"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Toolbar&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Toolbar&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../Developers_Guide.1.html" title="CKEditor 3.x/Developers Guide">Developers Guide</a></span></div>
+                      <h1 id="mainHeader">CKEditor Toolbar</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p> 
+While CKEditor is a full-featured WYSIWYG editor, not all of its options may be needed in all cases. Because of this, toolbar customization is one of the most common and required tasks when dealing with CKEditor. 
+</p>
+<div id="toc" class="toc"><div id="toctitle" class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Toolbar.html#Toolbar_Definition"><span class="tocnumber">1</span> <span class="toctext">Toolbar Definition</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Toolbar.html#Toolbar_Button_Groups"><span class="tocnumber">1.1</span> <span class="toctext">Toolbar Button Groups</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="Toolbar.html#Forcing_Row_Break"><span class="tocnumber">1.2</span> <span class="toctext">Forcing Row Break</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="Toolbar.html#Toolbar_Customization"><span class="tocnumber">2</span> <span class="toctext">Toolbar Customization</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Toolbar_Definition">Toolbar Definition</span></h2>
+<p>A toolbar definition is a JavaScript array that contains the elements to be displayed in all <b>toolbar rows</b> available in the editor.
+</p><p>The toolbar configuration can be defined in CKEditor using one of the following methods:
+</p>
+<ul><li> The <code><a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.toolbar">toolbar</a></code> setting.</li>
+<li> The <code>toolbar_<i>name</i></code> setting, where the <code><i>name</i></code> element is the name used to identify the toolbar in the <code>toolbar</code> setting.</li></ul>
+<p>The following code snippet contains the default CKEditor toolbar setting. 
+</p>
+<pre class="code2highlight">config.toolbar = 'Full';
+
+config.toolbar_Full =
+[
+	{ name: 'document', items&#160;: [ 'Source','-','Save','NewPage','DocProps','Preview','Print','-','Templates' ] },
+	{ name: 'clipboard', items&#160;: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+	{ name: 'editing', items&#160;: [ 'Find','Replace','-','SelectAll','-','SpellChecker', 'Scayt' ] },
+	{ name: 'forms', items&#160;: [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 
+        'HiddenField' ] },
+	'/',
+	{ name: 'basicstyles', items&#160;: [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+	{ name: 'paragraph', items&#160;: [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','CreateDiv',
+	'-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiLtr','BidiRtl' ] },
+	{ name: 'links', items&#160;: [ 'Link','Unlink','Anchor' ] },
+	{ name: 'insert', items&#160;: [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe' ] },
+	'/',
+	{ name: 'styles', items&#160;: [ 'Styles','Format','Font','FontSize' ] },
+	{ name: 'colors', items&#160;: [ 'TextColor','BGColor' ] },
+	{ name: 'tools', items&#160;: [ 'Maximize', 'ShowBlocks','-','About' ] }
+];
+
+config.toolbar_Basic =
+[
+	['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink','-','About']
+];</pre> 
+<p>Note that in the code above (just like in the default CKEditor configuration) two toolbar definitions have been defined. The first one is named <b>Full</b> and the second one is <b>Basic</b>. The toolbar was set to use the <b>Full</b> definition.
+</p>
+<h3><span class="mw-headline" id="Toolbar_Button_Groups">Toolbar Button Groups</span></h3>
+<p>Every toolbar definition is composed of a series of <b>toolbar button groups</b>. Each toolbar group has a label (name) and the listing of buttons that belong to the group, placed in square brackets (<code>[ ]</code>). The toolbar group items move together to new rows when the editor is resized.
+</p><p>The group label will be used by assisstive devices such as screen readers. It is added in the <code>name</code> attribute and is first looked up in the CKEditor language file (under the <code>editor.lang.toolbarGroups.<i>group_name</i></code> entry). When its definition is found, the text value of this entry is used. If the <code>name</code> attribute value does not appear in the language file, it is taken as a literal toolbar group label and read aloud.
+</p><p>As visible in the code above, each toolbar button group is defined as a separate JavaScript array of strings. Every string stands for a single toolbar item to be used. Toolbar items are defined by plugins. 
+</p><p>You can also include a separator in the toolbar group by including a dash (<code>"-"</code>) character in it.
+</p>
+<h3><span class="mw-headline" id="Forcing_Row_Break">Forcing Row Break</span></h3>
+<p>The <b>Full</b> definition contains numerous slash (<code>"/"</code>) characters that were placed between toolbar button groups. They can be used to force a break at the point where they were placed, rendering the next toolbar group in a new row. This placement will not be changed when CKEditor is resized.
+</p>
+<h2><span class="mw-headline" id="Toolbar_Customization">Toolbar Customization</span></h2>
+<p>A simple way to configure the toolbars of all CKEditor instances is to add a custom toolbar definition inside the <code>config.js</code> file, or even better &#8212; in a separate custom configuration file (see <a href="Setting_Configurations.html" title="CKEditor 3.x/Developers Guide/Setting Configurations">Setting Configuration</a>). The easiest way to do that is to copy the default <b>Full</b> toolbar definition, and strip it down to your needs.
+</p><p>For example, the following is a good recommended toolbar definition that can be placed in the <code>config.js</code> file: 
+</p>
+<pre class="code2highlight">CKEDITOR.editorConfig = function( config )
+{
+	config.toolbar = 'MyToolbar';
+
+	config.toolbar_MyToolbar =
+	[
+		{ name: 'document', items&#160;: [ 'NewPage','Preview' ] },
+		{ name: 'clipboard', items&#160;: [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+		{ name: 'editing', items&#160;: [ 'Find','Replace','-','SelectAll','-','Scayt' ] },
+		{ name: 'insert', items&#160;: [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'
+                 ,'Iframe' ] },
+                '/',
+		{ name: 'styles', items&#160;: [ 'Styles','Format' ] },
+		{ name: 'basicstyles', items&#160;: [ 'Bold','Italic','Strike','-','RemoveFormat' ] },
+		{ name: 'paragraph', items&#160;: [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote' ] },
+		{ name: 'links', items&#160;: [ 'Link','Unlink','Anchor' ] },
+		{ name: 'tools', items&#160;: [ 'Maximize','-','About' ] }
+	];
+};</pre> 
+<p>Inside the configuration file you can create as many toolbar definitions as you need. Later, based on some criteria, you can choose the toolbar to use for each CKEditor instance. Each toolbar definition can be used as many times as required (or not used at all, for that matter). For example, with the following code, two editors are created on the page and each one is using a different toolbar: 
+</p>
+<pre class="code2highlight">CKEDITOR.replace( 'editor1',
+	{
+		toolbar&#160;: 'MyToolbar'
+	});
+
+CKEDITOR.replace( 'editor2',
+	{
+		toolbar&#160;: 'Basic'
+	});</pre> 
+<p>It is also possible to set the toolbar definition in-page, at the same time when you create an editor instance. If this is the case, assign the toolbar setting directly to the editor instance, like in the example below: 
+</p>
+<pre class="code2highlight">CKEDITOR.replace( 'editor1',
+	{
+		toolbar&#160;:
+		[
+			{ name: 'basicstyles', items&#160;: [ 'Bold','Italic' ] },
+			{ name: 'paragraph', items&#160;: [ 'NumberedList','BulletedList' ] },
+			{ name: 'tools', items&#160;: [ 'Maximize','-','About' ] }
+		]
+	});</pre>
+<div class="note"><div class="floatleft"><a title="Important note" class="image" href="https://docs-old.ckeditor.com/File:Warning_blue.png"><img width="30" height="30" border="0" src="../../images/thumb/8/81/Warning_blue.png/30px-Warning_blue.png" alt="important note"></a></div>
+Please note that the toolbar definition was changed in <b>CKEditor 3.6</b>, when a concept of toolbar button groups was introduced. This feature is WAI-ARIA compliant and important for accessibility support, so we recommend to upgrade custom definitions created for previous versions and follow the new standard described above.</div>
+
+<!-- 
+NewPP limit report
+Cached time: 20180629032147
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.013 seconds
+Real time usage: 0.016 seconds
+Preprocessor visited node count: 39/1000000
+Preprocessor generated node count: 132/1000000
+Post‐expand include size: 62/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:756-0!*!0!!en!*!* and timestamp 20180629032147 and revision id 6870
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Toolbar&amp;oldid=6870">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Toolbar&amp;oldid=6870</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 5 March 2012, at 13:13.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

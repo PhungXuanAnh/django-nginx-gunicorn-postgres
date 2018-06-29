@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Developers Guide/Setting Configurations - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Developers_Guide/Setting_Configurations","wgTitle":"CKEditor 3.x/Developers Guide/Setting Configurations","wgCurRevisionId":5901,"wgRevisionId":5901,"wgArticleId":749,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Developers_Guide/Setting_Configurations","wgRelevantArticleId":749,"wgRequestId":"WzWpHT35r@OQ5VxhRJw8rQAAARE","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Developers_Guide_Setting_Configurations rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Setting_Configurations.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FDevelopers+Guide%2FSetting+Configurations">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Setting_Configurations.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/Talk:CKEditor_3.x/Developers_Guide/Setting_Configurations"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Setting_Configurations&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Setting_Configurations&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../Developers_Guide.1.html" title="CKEditor 3.x/Developers Guide">Developers Guide</a></span></div>
+                      <h1 id="mainHeader">Setting CKEditor Configuration</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p>
+CKEditor comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. The main configuration file is named <code>config.js</code>. This file can be found in the root of the CKEditor installation folder. 
+</p>
+<div id="toc" class="toc"><div id="toctitle" class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Setting_Configurations.html#Available_Configuration_Options"><span class="tocnumber">1</span> <span class="toctext">Available Configuration Options</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Setting_Configurations.html#Defining_Configuration_In-Page"><span class="tocnumber">2</span> <span class="toctext">Defining Configuration In-Page</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="Setting_Configurations.html#Using_the_config.js_File"><span class="tocnumber">3</span> <span class="toctext">Using the config.js File</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="Setting_Configurations.html#Using_a_Custom_Configuration_File"><span class="tocnumber">4</span> <span class="toctext">Using a Custom Configuration File</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="Setting_Configurations.html#Configuration_Loading_Order"><span class="tocnumber">5</span> <span class="toctext">Configuration Loading Order</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="Setting_Configurations.html#Avoiding_Loading_External_Settings_Files"><span class="tocnumber">6</span> <span class="toctext">Avoiding Loading External Settings Files</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="Setting_Configurations.html#Mapping_CKEditor_and_FCKeditor_Configuration_Settings"><span class="tocnumber">7</span> <span class="toctext">Mapping CKEditor and FCKeditor Configuration Settings</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Available_Configuration_Options">Available Configuration Options</span></h2>
+<p>All available configuration options can be found in the <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/index.html">CKEditor JavaScript API</a> documentation. Refer to the <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html">CKEDITOR.config</a> object definition.
+</p>
+<h2><span class="mw-headline" id="Defining_Configuration_In-Page">Defining Configuration In-Page</span></h2>
+<p>The best way to set the CKEditor configuration is in-page, when creating editor instances. This method lets you avoid modifying the original distribution files in the CKEditor installation folder, making the upgrade task easier. 
+</p><p>In-page settings can be passed to any of the editor instance creation functions, namely <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.html#.replace">CKEDITOR.replace</a> and <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.html#.appendTo">CKEDITOR.appendTo</a>. For example: 
+</p>
+<pre class="code2highlight lang-javascript">CKEDITOR.replace( 'editor1',
+    {
+        toolbar&#160;: 'Basic',
+        uiColor&#160;: '#9AB8F3'
+    });</pre> 
+<p>Note that the configuration options are passed through a literal object definition (starting with a "<code>{</code>" symbol and ending with a "<code>}</code>" symbol). Because of this the proper syntax for each option is <code>(<i>configuration name</i>)&#160;: (<i>configuration value</i>)</code>. Be sure to not use the "equal" character (<code>=</code>) in place of the colon character (<code>:</code>).
+</p>
+<h2><span class="mw-headline" id="Using_the_config.js_File">Using the config.js File</span></h2>
+<p>CKEditor settings can also be configured by using the <code>config.js</code> file. By default this file is mostly empty. To change CKEditor configuration, add the settings that you want to modify to the <code>config.js</code> file. For example: 
+</p>
+<pre class="code2highlight lang-javascript">CKEDITOR.editorConfig = function( config )
+{
+    config.language = 'fr';
+    config.uiColor = '#AADC6E';
+};</pre>
+<p>In order to apply the configuration settings, the <code><a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.html#.editorConfig">CKEDITOR.editorConfig</a></code> function must always be defined. The <code>config.js</code> file will be executed in the scope of your page, so you can also make references to variables defined in-page or even in other JavaScript files.
+</p>
+<h2><span class="mw-headline" id="Using_a_Custom_Configuration_File">Using a Custom Configuration File</span></h2>
+<p>Using a custom configuration file is another recommended method of setting CKEditor configuration. Instead of using the default <code>config.js</code> file, you can create a copy of that file anywhere in your website and simply point the editor instances to load it. The advantage of this approach is that in this way you can avoid changing the original file, which makes it easier to upgrade CKEditor later by simply overwriting all files. 
+</p><p>Suppose you copied the <code>config.js</code> file to a folder named <code>custom</code> in the root of your website. You also renamed the file to <code>ckeditor_config.js</code>. At that point it is enough to only set the <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.customConfig">customConfig</a> configuration option when creating the editor instances to use the customized settings defined in the file. For example: 
+</p>
+<pre class="code2highlight lang-javascript">CKEDITOR.replace( 'editor1',
+    {
+        customConfig&#160;: '/custom/ckeditor_config.js'
+    });</pre>
+<p>The custom configuration file must look just like the default <code>config.js</code> file.
+</p>
+<h2><span class="mw-headline" id="Configuration_Loading_Order">Configuration Loading Order</span></h2>
+<p>You are not required to only use one of the above configuration options. The methods described above can be mixed and the configuration will be loaded properly. The following list presents the configuration loading order used when creating an editor instance: 
+</p>
+<ol><li> An editor instance is created. At this point all its default configuration options are set. </li>
+<li> If the <code>customConfig</code> setting has been set "in-page", that file is loaded, otherwise the default <code>config.js</code> file is loaded. All settings in the custom configuration file override current instance settings. </li>
+<li> If the settings loaded in step 2 also define a new <code>customConfig</code> value, another custom configuration file is loaded and its settings override current instance settings. This happens recursively for all files until no <code>customConfig</code> is defined. </li>
+<li> Finally the settings defined "in-page" override current instance settings (except <code>customConfig</code>, which has been used in step 1).</li></ol>
+<h2><span class="mw-headline" id="Avoiding_Loading_External_Settings_Files">Avoiding Loading External Settings Files</span></h2>
+<p>It is also possible to completely avoid loading an external configuration file, reducing the number of files loaded. To do that, you need to set the <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.customConfig">customConfig</a> setting to an empty string. For example: 
+</p>
+<pre class="code2highlight lang-javascript">CKEDITOR.replace( 'editor1',
+    {
+        customConfig&#160;: ''
+    });</pre>
+<p>This setting is definitely recommended, if you are not setting the configuration in the <code>config.js</code> file nor a custom configuration file.
+</p>
+<h2><span class="mw-headline" id="Mapping_CKEditor_and_FCKeditor_Configuration_Settings">Mapping CKEditor and FCKeditor Configuration Settings</span></h2>
+<p>If you moved to CKEditor from its predecessor, FCKeditor, you might be used to setting the configuration in the FCKeditor way. To make it easier for you to upgrade to the new editor line we have prepared a mapping between configuration settings available in <a href="https://docs-old.ckeditor.com/FCKeditor_2.x/Developers_Guide" title="FCKeditor 2.x/Developers Guide">FCKeditor 2.x</a> and CKEditor 3.x. A full listing <a href="FCKeditor_CKEditor_Configuration_Mapping.html" title="CKEditor 3.x/Developers Guide/FCKeditor CKEditor Configuration Mapping">can be found here</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20180628102217
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.016 seconds
+Real time usage: 0.019 seconds
+Preprocessor visited node count: 65/1000000
+Preprocessor generated node count: 120/1000000
+Post‐expand include size: 76/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:749-0!*!0!!en!*!* and timestamp 20180628102217 and revision id 5901
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Setting_Configurations&amp;oldid=5901">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/Setting_Configurations&amp;oldid=5901</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 8 March 2011, at 16:44.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    

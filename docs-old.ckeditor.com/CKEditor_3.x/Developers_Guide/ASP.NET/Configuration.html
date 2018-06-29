@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>CKEditor 3.x/Developers Guide/ASP.NET/Configuration - CKSource Docs</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"CKEditor_3.x/Developers_Guide/ASP.NET/Configuration","wgTitle":"CKEditor 3.x/Developers Guide/ASP.NET/Configuration","wgCurRevisionId":6209,"wgRevisionId":6209,"wgArticleId":1901,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"CKEditor_3.x/Developers_Guide/ASP.NET/Configuration","wgRelevantArticleId":1901,"wgRequestId":"WzWpNz35r@OQ5VxhRJw80AAAAQ8","wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":true,"publish":true}});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@11i7vzj",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.HighlightjsIntegration"]);});</script>
+<link rel="stylesheet" href="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%252Cshared%257Cmediawiki.sectionAnchor&amp;only=styles&amp;skin=oldv4.css"/>
+<script async="" src="../../../load.php%3Fdebug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=oldv4"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<meta name="generator" content="MediaWiki 1.29.1"/>
+<link rel="shortcut icon" href="https://c.cksource.com/c/2/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs-old.ckeditor.com/opensearch_desc.php" title="CKSource Docs (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://docs-old.ckeditor.com/api.php?action=rsd"/>
+<link rel="alternate" type="application/atom+xml" title="CKSource Docs Atom feed" href="https://docs-old.ckeditor.com/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/base.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="../../../skins/OldV4/resources/css/main.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../../skins/OldV4/resources/js/jquery-2.2.4.min.js"<\/script>');</script>
+<script type="text/javascript">$(document).ready(function (){
+        $("a.hidinglink")
+        .each(function () {$("#" + $(this).show().attr("rel")).hide();})
+        .click(function () {$("#" + $(this).attr("rel")).slideToggle();return false;});
+      });
+      </script>
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-CKEditor_3_x_Developers_Guide_ASP_NET_Configuration rootpage-CKEditor_3_x skin-oldv4 action-view">      <a href="Configuration.html#content-wrapper" id="skip-to-content" class="element-invisible element-focusable">Skip to main content</a>
+      <div id="wrap">
+
+          <header role="banner" class="main">
+              <div>
+                  <div class="first">
+                      <h1><a href="https://docs-old.ckeditor.com/" title="Return to home page" class="cksource-logo">CKSource</a></h1>
+                  </div>
+              </div>
+          </header>
+
+          <div role="main" id="content-wrapper" tabindex="-1" class="content-wrapper">
+              <div>
+                        <div id="personaltools"
+                    >
+            <h5>
+                <a href="https://docs-old.ckeditor.com/index.php?title=Special:UserLogin&amp;returnto=CKEditor+3.x%2FDevelopers+Guide%2FASP.NET%2FConfiguration">
+                    Login / Create Account
+                </a>
+            </h5>
+              </div>
+    
+                        <div id="pagetools" class="">
+          <h5>Page Tools</h5>
+          <div class="pagetoolslist">
+              <ul>
+                                    <li id="ca-nstab-main"
+                                                class="selected"
+                                          >
+                        <a href="Configuration.html"
+                           title="View the content page [c]" accesskey="c"                        >
+                          Page                        </a>
+                    </li>
+                                    <li id="ca-talk"
+                                                class="new"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=Talk:CKEditor_3.x/Developers_Guide/ASP.NET/Configuration&amp;action=edit&amp;redlink=1"
+                           title="Discussion about the content page [t]" accesskey="t"                        >
+                          Discussion                        </a>
+                    </li>
+                                    <li id="ca-viewsource"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/ASP.NET/Configuration&amp;action=edit"
+                           title="This page is protected.
+You can view its source [e]" accesskey="e"                        >
+                          View source                        </a>
+                    </li>
+                                    <li id="ca-history"
+                                          >
+                        <a href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/ASP.NET/Configuration&amp;action=history"
+                           title="Past revisions of this page [h]" accesskey="h"                        >
+                          History                        </a>
+                    </li>
+                              </ul>
+          </div>
+      </div>
+    
+                  <!--  page content -->
+                  <div class="clear"></div>
+
+                      <div id="content">
+          <div id="main">
+              <div id="mainInside">
+                  <div id="mainInsideInside">
+                      <div id="breadcrumbs"><span class="subpages">&lt; <a href="https://docs-old.ckeditor.com/CKEditor_3.x" title="CKEditor 3.x">CKEditor 3.x</a>&lrm; | <a href="../../Developers_Guide.1.html" title="CKEditor 3.x/Developers Guide">Developers Guide</a>&lrm; | <a href="../ASP.NET.1.html" title="CKEditor 3.x/Developers Guide/ASP.NET">ASP.NET</a></span></div>
+                      <h1 id="mainHeader">Setting CKEditor for ASP.NET Configuration</h1>
+
+                      <div class="errorbox" style="margin-top: 40px;">
+                          <p>This website contains links to software which is either no longer maintained or will be supported only until the end of 2019 (CKFinder 2). For the latest documentation about current CKSource projects, including software like CKEditor 4/CKEditor 5, CKFinder 3, Cloud Services, Letters, Accessibility Checker, please visit <a href="https://docs.ckeditor.com">the new documentation website</a>.</p>
+                      </div>
+
+                      <div id="mainCol">
+                          <div class="post">
+                            <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="toc" class="toc"><div id="toctitle" class="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Configuration.html#CKEditor_for_ASP.NET_Control_Properties"><span class="tocnumber">1</span> <span class="toctext">CKEditor for ASP.NET Control Properties</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Configuration.html#Passing_Configuration_String_Values"><span class="tocnumber">2</span> <span class="toctext">Passing Configuration String Values</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="Configuration.html#Methods_of_Setting_Configuration"><span class="tocnumber">3</span> <span class="toctext">Methods of Setting Configuration</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="Configuration.html#Toolbar_Definition"><span class="tocnumber">4</span> <span class="toctext">Toolbar Definition</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="Configuration.html#Options_Defined_as_Enumerators"><span class="tocnumber">5</span> <span class="toctext">Options Defined as Enumerators</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="Configuration.html#Options_Defined_as_Arrays"><span class="tocnumber">6</span> <span class="toctext">Options Defined as Arrays</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="Configuration.html#Event_Support"><span class="tocnumber">7</span> <span class="toctext">Event Support</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="Configuration.html#Additional_Configuration_Options"><span class="tocnumber">8</span> <span class="toctext">Additional Configuration Options</span></a></li>
+</ul>
+</div>
+
+<p>
+CKEditor is a highly customizable tool and the full list of all configuration options is available in the <a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html">JavaScript API</a>. The <code>config</code> configuration object of CKEditor for ASP.NET contains all configuration options of the standard CKEditor release, as available in the JavaScript API documentation.
+</p><p>The CKEditor for ASP.NET Control also contains some of the frequently used and thus most useful configuration options in a form of CKEditor control <b>properties</b>. These properties can be set both in the source code and in Visual Studio visual designer, where they can be seen in the <b>Properties</b> window.
+</p>
+<h2><span class="mw-headline" id="CKEditor_for_ASP.NET_Control_Properties">CKEditor for ASP.NET Control Properties</span></h2>
+<p>The names of the CKEditor for ASP.NET properties use the <a rel="nofollow" class="external text" href="http://msdn.microsoft.com/en-us/library/ms229043.aspx">ASP.NET naming conventions</a> and are written in Pascal case. Check some of the comparisons between the JavaScript names and ASP.NET ones. 
+</p><p>Orginal JavaScript name:
+</p>
+<pre class="code2highlight lang-javascript">CKEditor1.config.format_tags = &quot;p;h1;h2;h3;h4;h5;h6;pre;address;div&quot;;
+CKEditor1.config.defaultLanguage = &quot;en&quot;;</pre>
+<p>ASP.NET name in Pascal case:
+</p>
+<pre class="code2highlight lang-html">CKEditor1.FormatTags = &quot;p;h1;h2;h3;h4;h5;h6;pre;address;div&quot;;
+CKEditor1.DefaultLanguage = &quot;en&quot;;</pre>
+<h2><span class="mw-headline" id="Passing_Configuration_String_Values">Passing Configuration String Values</span></h2>
+<p>Please note that CKEditor for ASP.NET settings that are represented by string objects when passed from ASP.NET to JavaScript do not require additional quote characters as they will be converted to the JSON format automatically.
+</p>
+<pre class="code2highlight lang-html">CKEditor1.config.defaultLanguage = &quot;en&quot;;
+CKEditor1.config.filebrowserImageBrowseUrl = &quot;~/ckfinder/ckfinder.html?type=Images&quot;;
+CKEditor1.config.filebrowserImageUploadUrl = &quot;~/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&amp;type=Images&quot;;
+CKEditor1.config.format_div = @&quot;{ element&#160;: 'div' }&quot;;
+CKEditor1.config.toolbar = &quot;Full&quot;;
+CKEditor1.config.toolbar = new object[] { new object[] { &quot;Source&quot;, &quot;About&quot; } };</pre>
+<h2><span class="mw-headline" id="Methods_of_Setting_Configuration">Methods of Setting Configuration</span></h2>
+<p>The configuration of the CKEditor for ASP.NET Control can be set in two different ways.
+</p><p>Firstly, you can define the configuration in the source file, inside the <code>&lt;script&gt;</code> element (either inline or in the external source file).
+</p>
+<pre class="code2highlight lang-html">&lt;script language=&quot;C#&quot; runat=&quot;server&quot;&gt;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+	CKEditor1.config.toolbar = &quot;Basic&quot;;
+    }
+&lt;/script&gt;</pre>
+<p>Secondly, you can set the same property in the CKEditor for ASP.NET control tag on the <code>.aspx</code> page.
+</p>
+<pre class="code2highlight lang-html">&lt;CKEditor:CKEditorControl ID=&quot;CKEditor1&quot; runat=&quot;server&quot; Toolbar=&quot;Basic&quot;&gt;
+&lt;/CKEditor:CKEditorControl&gt;</pre>
+<p>Do remember, though, that if you use both methods at the same time, the definition from the source code will prevail and override the one from the CKEditor for ASP.NET control tag.
+</p>
+<h2><span class="mw-headline" id="Toolbar_Definition">Toolbar Definition</span></h2>
+<p>CKEditor toolbar can be defined in a similar way as <a href="../Toolbar.html" title="CKEditor 3.x/Developers Guide/Toolbar">in JavaScript</a>, using an array of objects representing toolbar elements (buttons, drop-down menus).
+</p><p>The toolbar can be defined inside the source code file.
+</p>
+<pre class="code2highlight lang-html">CKEditor1.config.toolbar = new object[]
+{
+	new object[] { &quot;Source&quot; },
+	new object[] { &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;-&quot;, &quot;Subscript&quot;, &quot;Superscript&quot; },
+	new object[] { &quot;NumberedList&quot;, &quot;BulletedList&quot;, &quot;-&quot;, &quot;Outdent&quot;, &quot;Indent&quot; },
+	&quot;/&quot;,
+	new object[] { &quot;Styles&quot;, &quot;Format&quot;, &quot;Font&quot;, &quot;FontSize&quot;, &quot;TextColor&quot;, &quot;BGColor&quot;, &quot;-&quot;, &quot;About&quot; },
+};</pre>
+<p>It can also be defined inside the <code>.aspx</code> page.
+</p>
+<pre class="code2highlight lang-html">&lt;CKEditor:CKEditorControl ID=&quot;CKEditor1&quot; runat=&quot;server&quot; 
+Toolbar=&quot;Source
+Bold|Italic|Underline|Strike|-|Subscript|Superscript
+NumberedList|BulletedList|-|Outdent|Indent
+/
+Styles|Format|Font|FontSize|TextColor|BGColor|-|About&quot;&gt;
+&lt;/CKEditor:CKEditorControl&gt;</pre>
+<p>CKEditor comes with two predefined toolbar sets, so instead of providing the full definition of a toolbar it is possible also to specify simply the name of a toolbar:
+</p>
+<pre class="code2highlight lang-html">CKEditor1.config.toolbar = &quot;Full&quot;;</pre>
+<pre class="code2highlight lang-html">&lt;CKEditor:CKEditorControl ID=&quot;CKEditor1&quot; runat=&quot;server&quot; Toolbar=&quot;Full&quot;&gt;
+&lt;/CKEditor:CKEditorControl&gt;</pre>
+<h2><span class="mw-headline" id="Options_Defined_as_Enumerators">Options Defined as Enumerators</span></h2>
+<p>Some configuration options that let you select one or more pre-defined options are implemented as enumerators. You can set them in the following way.
+</p><p>Inside the source code file:
+</p>
+<pre class="code2highlight lang-html">CKEditor1.config.contentsLangDirection = contentsLangDirections.Ui;
+CKEditor1.config.dialog_buttonsOrder = DialogButtonsOrder.OS;
+CKEditor1.config.enterMode = EnterMode.P;
+CKEditor1.config.resize_dir = ResizeDir.Both;
+CKEditor1.config.scayt_contextCommands = ScaytContextCommands.All;
+CKEditor1.config.scayt_contextMenuItemsOrder = ScaytContextMenuItemsOrder.Suggest | ScaytContextMenuItemsOrder.Moresuggest;
+CKEditor1.config.scayt_moreSuggestions = ScaytMoreSuggestions.On;
+CKEditor1.config.shiftEnterMode = EnterMode.P;
+CKEditor1.config.startupMode = StartupMode.Wysiwyg;
+CKEditor1.config.toolbarLocation = ToolbarLocation.Top;</pre>
+<p>Inside the <code>.aspx</code> page:
+</p>
+<pre class="code2highlight lang-html">&lt;CKEditor:CKEditorControl ID=&quot;CKEditor1&quot; runat=&quot;server&quot; Toolbar=&quot;Full&quot; ContentsLangDirection=&quot;Ui&quot; DialogButtonsOrder=&quot;OS&quot; 
+	EnterMode=&quot;P&quot; ResizeDir=&quot;Both&quot; ShiftEnterMode=&quot;P&quot; StartupMode=&quot;Wysiwyg&quot; ToolbarLocation=&quot;Top&quot;&gt;
+&lt;/CKEditor:CKEditorControl&gt;</pre>
+<h2><span class="mw-headline" id="Options_Defined_as_Arrays">Options Defined as Arrays</span></h2>
+<p>Some CKEditor options (like <code><a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.smiley_images">smiley_images</a></code> or <code><a rel="nofollow" class="external text" href="http://docs.cksource.com/ckeditor_api/symbols/CKEDITOR.config.html#.specialChars">specialChars</a></code>) are defined in JavaScript as array objects, in the following way:
+</p>
+<pre class="code2highlight lang-javascript">config.smiley_descriptions =
+    [
+        'smiley', 'sad', 'wink', 'laugh', 'frown', 'cheeky', 'blush', 'surprise',
+        'indecision', 'angry', 'angel', 'cool', 'devil', 'crying', 'enlightened', 'no',
+        'yes', 'heart', 'broken heart', 'kiss', 'mail'
+    ];</pre>
+<p>To define them using ASP.NET, use the following form:
+</p>
+<pre class="code2highlight lang-html">CKEditor1.config.smiley_descriptions = new string[]
+{
+	&quot;smiley&quot;, &quot;sad&quot;, &quot;wink&quot;, &quot;laugh&quot;, &quot;frown&quot;, &quot;cheeky&quot;, &quot;blush&quot;, &quot;surprise&quot;,
+	&quot;indecision&quot;, &quot;angry&quot;, &quot;angel&quot;, &quot;cool&quot;, &quot;devil&quot;, &quot;crying&quot;, &quot;enlightened&quot;, &quot;no&quot;,
+	&quot;yes&quot;, &quot;heart&quot;, &quot;broken heart&quot;, &quot;kiss&quot;, &quot;mail&quot;
+};
+
+CKEditor1.config.blockedKeystrokes = new int[]
+{
+	CKEditorConfig.CKEDITOR_CTRL + 66 /*B*/, CKEditorConfig.CKEDITOR_CTRL + 73 /*I*/, CKEditorConfig.CKEDITOR_CTRL + 85 /*U*/
+};
+
+CKEditor1.config.keystrokes = new object[] 
+{ 
+	new object[] { CKEditorConfig.CKEDITOR_ALT + 121 /*F10*/, &quot;toolbarFocus&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_ALT + 122 /*F11*/, &quot;elementsPathFocus&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_SHIFT + 121 /*F10*/, &quot;contextMenu&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_CTRL + 90 /*Z*/, &quot;undo&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_CTRL + 89 /*Y*/, &quot;redo&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_CTRL + CKEditorConfig.CKEDITOR_SHIFT + 90 /*Z*/, &quot;redo&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_CTRL + 76 /*L*/, &quot;link&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_CTRL + 66 /*B*/, &quot;bold&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_CTRL + 73 /*I*/, &quot;italic&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_CTRL + 85 /*U*/, &quot;underline&quot; },
+	new object[] { CKEditorConfig.CKEDITOR_ALT + 109 /*-*/, &quot;toolbarCollapse&quot; }
+};</pre>
+<h2><span class="mw-headline" id="Event_Support">Event Support</span></h2>
+<p>CKEditor for ASP.NET control events can be added to both the global editor object and an editor instance.
+</p><p>To attach an event handler to an editor instance configure the <code>CKEditorInstanceEventHandler</code> property. 
+</p>
+<pre class="code2highlight lang-html">// Equivalent to CKEditor1.on in JavaScript
+CKEditor1.config.CKEditorInstanceEventHandler = new System.Collections.Generic.List&lt;object&gt;();
+CKEditor1.config.CKEditorInstanceEventHandler.Add(new object[] { &quot;instanceReady&quot;
+	, &quot;function (evt) { alert('Event handler attached to editor instance: ' + evt.editor.name);}&quot; });</pre>
+<p>To attach events globally to the CKEditor object, use the <code>CKEditorEventHandler.Add</code> function.
+</p>
+<pre class="code2highlight lang-html">// Equivalent to CKEDITOR.on in JavaScript
+CKEditor1.config.CKEditorEventHandler.Add(new object[] { &quot;instanceReady&quot;
+	, &quot;function (evt) { alert('Events handler attached to CKEDITOR object.');}&quot; });</pre>
+<h2><span class="mw-headline" id="Additional_Configuration_Options">Additional Configuration Options</span></h2>
+<p>If you want to add the configuration properties that do not come directly from CKEditor, but are available in the plugins included in your installation, use the <code>ExtraOptions</code> hash table.
+</p>
+<pre class="code2highlight lang-html">CKEditor1.config.ExtraOptions[&quot;myConfigurationOption&quot;] = &quot;'sample value'&quot;;</pre>
+
+<!-- 
+NewPP limit report
+Cached time: 20180628062559
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.022 seconds
+Real time usage: 0.022 seconds
+Preprocessor visited node count: 172/1000000
+Preprocessor generated node count: 364/1000000
+Post‐expand include size: 88/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key ckeditor_docsold:pcache:idhash:1901-0!*!0!!en!*!* and timestamp 20180628062559 and revision id 6209
+ -->
+</div><div class="printfooter">
+Retrieved from "<a dir="ltr" href="https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/ASP.NET/Configuration&amp;oldid=6209">https://docs-old.ckeditor.com/index.php?title=CKEditor_3.x/Developers_Guide/ASP.NET/Configuration&amp;oldid=6209</a>"</div>
+                          </div>
+                          <div class="clear"></div>
+                      </div>
+
+                                            <div id="contentfooter">
+                           This page was last edited on 20 April 2011, at 15:43.                        </div>
+                                      </div>
+              </div>
+          </div>
+      </div><!--/content-->
+                      <!--  & of page content  -->
+              </div>
+          </div>
+      </div>
+
+        <footer class="main">
+        <div>
+            <div class="additional">
+                <small role="contentinfo">&copy; 2003 - 2018 <a href="https://cksource.com/" title="Go to CKSource">CKSource</a> Sp. z o.o. sp.k. All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX62SZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-MX62SZ');</script>
+    <!-- End Google Tag Manager -->
+
+    </body>
+    </html>
+    
