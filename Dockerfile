@@ -1,6 +1,10 @@
 # start from an official image
 FROM python:3.6
 
+RUN apt-get update -qq
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y supervisor
+
 # arbitrary location choice: you can change the directory
 RUN mkdir -p /deploy/django-nginx-gunicorn-postgres/
 WORKDIR /deploy/django-nginx-gunicorn-postgres/
@@ -14,4 +18,4 @@ RUN pip install -r requirement.txt
 RUN python manage.py collectstatic --no-input
 
 # define the default command to run when starting the container
-CMD ["gunicorn", "--chdir", "django-nginx-gunicorn-postgres", "--bind", ":8001", "django-nginx-gunicorn-postgres.wsgi:application"]
+CMD ["/usr/bin/supervisord", "-n"]

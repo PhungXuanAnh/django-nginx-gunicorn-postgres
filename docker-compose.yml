@@ -8,6 +8,7 @@ services:
       - config/app/docker-env
     volumes:
       - .:/deploy/django-nginx-gunicorn-postgres/
+      - ./config/supervisor/supervisor.conf:/etc/supervisor/conf.d/supervisor.conf # <-- here
       - static_volume:/deploy/django-nginx-gunicorn-postgres/static  # <-- bind the static volume
       - media_volume:/deploy/django-nginx-gunicorn-postgres/MEDIA  # <-- bind the media volume
     networks:
