@@ -1,5 +1,5 @@
 """
-WSGI config for django-ckeditor-sample project.
+WSGI config for django-nginx-gunicorn-postgres project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django-ckeditor-sample.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "django-nginx-gunicorn-postgres.settings")
 
 application = get_wsgi_application()
