@@ -8,10 +8,12 @@ services:
       - config/app/docker-env
     volumes:
       - .:/deploy/django-nginx-gunicorn-postgres/
+      - static_volume:/deploy/django-nginx-gunicorn-postgres/static  # <-- bind the static volume
+      - media_volume:/deploy/django-nginx-gunicorn-postgres/MEDIA  # <-- bind the media volume
     networks:
       - nginx_network
-      - database1_network  # <-- connect to the bridge
-    depends_on:  # <-- wait for db to be "ready" before starting the app
+      - database1_network
+    depends_on:
       - database1
 
   nginx:
@@ -20,16 +22,18 @@ services:
       - 81:80
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
+      - static_volume:/deploy/django-nginx-gunicorn-postgres/static  # <-- bind the static volume
+      - media_volume:/deploy/django-nginx-gunicorn-postgres/MEDIA  # <-- bind the media volume
     depends_on:
       - django-nginx-gunicorn-postgres
     networks:
       - nginx_network
 
-  database1:  # <-- IMPORTANT: same name as in DATABASES setting, otherwise Django won't find the database!
+  database1:
     image: postgres:10
-    env_file:  # <-- we use the previously defined values
+    env_file:
       - config/db/database1_env
-    networks:  # <-- connect to the bridge
+    networks:
       - database1_network
     volumes:
       - database1_volume:/var/lib/postgresql/data
@@ -37,8 +41,10 @@ services:
 networks:
   nginx_network:
     driver: bridge
-  database1_network:  # <-- add the bridge
+  database1_network:
     driver: bridge
 
 volumes:
   database1_volume:
+  static_volume:  # <-- declare the static volume
+  media_volume:  # <-- declare the media volume

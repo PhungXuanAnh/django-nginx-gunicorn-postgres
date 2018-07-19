@@ -11,8 +11,7 @@ COPY . /deploy/django-nginx-gunicorn-postgres/
 # install our two dependencies
 RUN pip install -r requirement.txt
 
-# expose the port 8000
-# EXPOSE 8000
+RUN python manage.py collectstatic --no-input
 
 # define the default command to run when starting the container
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8001"]
+CMD ["gunicorn", "--chdir", "django-nginx-gunicorn-postgres", "--bind", ":8001", "django-nginx-gunicorn-postgres.wsgi:application"]
