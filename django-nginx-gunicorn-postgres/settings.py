@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'django-nginx-gunicorn-postgres.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'database1',
+        'USER': 'database1_role',
+        'PASSWORD': 'database1_password',
+        'HOST': 'database1',  # <-- IMPORTANT: same name as docker-compose service!
+        'PORT': '5432',
     }
 }
 
@@ -218,12 +222,8 @@ CKEDITOR_CONFIGS = {
 LOG_DIR = BASE_DIR + "/logs"
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
-# SLACK_API_KEY = os.getenv('SLACK_API_KEY', 'None')
-# SLACK_USERNAME = os.getenv('SLACK_USERNAME', "django-nginx-gunicorn-postgres")
-SLACK_API_KEY = json.load(
-    open('/home/xuananh/Dropbox/Work/Other/slack-token-api-key.json',
-         'r'))['phungxuananh']
-SLACK_USERNAME = 'django-dev'
+SLACK_API_KEY = os.getenv('SLACK_API_KEY', 'your api key')
+SLACK_USERNAME = os.getenv('SLACK_USERNAME', "django-nginx-gunicorn-postgres")
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

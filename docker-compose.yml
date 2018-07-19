@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+
+  django-nginx-gunicorn-postgres:
+    build: .
+    env_file:
+      - config/app/docker-env
+    volumes:
+      - .:/deploy/django-nginx-gunicorn-postgres/
+    networks:
+      - nginx_network
+      - database1_network  # <-- connect to the bridge
+    depends_on:  # <-- wait for db to be "ready" before starting the app
+      - database1
+
+  nginx:
+    image: nginx:1.13
+    ports:
+      - 81:80
+    volumes:
+      - ./config/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - django-nginx-gunicorn-postgres
+    networks:
+      - nginx_network
+
+  database1:  # <-- IMPORTANT: same name as in DATABASES setting, otherwise Django won't find the database!
+    image: postgres:10
+    env_file:  # <-- we use the previously defined values
+      - config/db/database1_env
+    networks:  # <-- connect to the bridge
+      - database1_network
+    volumes:
+      - database1_volume:/var/lib/postgresql/data
+
+networks:
+  nginx_network:
+    driver: bridge
+  database1_network:  # <-- add the bridge
+    driver: bridge
+
+volumes:
+  database1_volume:
