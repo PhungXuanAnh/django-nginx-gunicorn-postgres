@@ -2,6 +2,18 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
+from django.contrib.auth.models import User
+
+
+def create_supersuser(apps, schema_editor):
+    if not User.objects.filter(email='phungxuananh1991@gmail.com'):
+        User.objects.create_superuser(
+            'admin', 'phungxuananh1991@gmail.com', 'admin')
+
+
+def reverse_func(apps, schema_editor):
+    # destroy what forward_func builds
+    pass
 
 
 class Migration(migrations.Migration):
@@ -12,10 +24,12 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(create_supersuser, reverse_func),
         migrations.CreateModel(
             name='Choice',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
                 ('choice_text', models.CharField(max_length=200)),
                 ('votes', models.IntegerField(default=0)),
             ],
@@ -23,14 +37,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Question',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('question_text', models.CharField(max_length=200, verbose_name='Question')),
+                ('id', models.AutoField(auto_created=True,
+                                        primary_key=True, serialize=False, verbose_name='ID')),
+                ('question_text', models.CharField(
+                    max_length=200, verbose_name='Question')),
                 ('pub_date', models.DateTimeField(verbose_name='date published')),
             ],
         ),
         migrations.AddField(
             model_name='choice',
             name='question',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='polls.Question'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE, to='polls.Question'),
         ),
     ]
