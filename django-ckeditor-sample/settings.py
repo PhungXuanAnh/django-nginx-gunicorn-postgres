@@ -216,6 +216,8 @@ CKEDITOR_CONFIGS = {
 #             LOGGING CONFIGURATION
 ########################################################################
 LOG_DIR = BASE_DIR + "/logs"
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
 # SLACK_API_KEY = os.getenv('SLACK_API_KEY', 'None')
 # SLACK_USERNAME = os.getenv('SLACK_USERNAME', "django-nginx-gunicorn-postgres")
 SLACK_API_KEY = json.load(
