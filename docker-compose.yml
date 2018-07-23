@@ -3,14 +3,15 @@ version: '3'
 services:
 
   django-nginx-gunicorn-postgres:
+    image: deploy-django-sample/django-nginx-gunicorn-postgres:1.1.1
     build: .
     env_file:
       - config/app/docker-env
     volumes:
       - .:/deploy/django-nginx-gunicorn-postgres/
-      - ./config/supervisor/supervisor.conf:/etc/supervisor/conf.d/supervisor.conf # <-- here
-      - static_volume:/deploy/django-nginx-gunicorn-postgres/static  # <-- bind the static volume
-      - media_volume:/deploy/django-nginx-gunicorn-postgres/MEDIA  # <-- bind the media volume
+      - ./config/supervisor/supervisor.conf:/etc/supervisor/conf.d/supervisor.conf
+      - static_volume:/deploy/django-nginx-gunicorn-postgres/static
+      - media_volume:/deploy/django-nginx-gunicorn-postgres/MEDIA
     networks:
       - nginx_network
       - database1_network
@@ -23,8 +24,8 @@ services:
       - 81:80
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
-      - static_volume:/deploy/django-nginx-gunicorn-postgres/static  # <-- bind the static volume
-      - media_volume:/deploy/django-nginx-gunicorn-postgres/MEDIA  # <-- bind the media volume
+      - static_volume:/deploy/django-nginx-gunicorn-postgres/static
+      - media_volume:/deploy/django-nginx-gunicorn-postgres/MEDIA
     depends_on:
       - django-nginx-gunicorn-postgres
     networks:
@@ -47,5 +48,5 @@ networks:
 
 volumes:
   database1_volume:
-  static_volume:  # <-- declare the static volume
-  media_volume:  # <-- declare the media volume
+  static_volume:
+  media_volume:
