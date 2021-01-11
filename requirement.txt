@@ -3,5 +3,5 @@ django-ckeditor==5.5.0
 django-js-asset==1.1.0
 gunicorn==19.9.0
 Pillow==5.2.0
-psycopg2-binary==2.7.5
+psycopg2-binary==2.8.6
 slacker-log-handler==1.7.1
