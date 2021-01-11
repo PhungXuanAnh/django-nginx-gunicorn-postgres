@@ -223,8 +223,8 @@ CKEDITOR_CONFIGS = {
 LOG_DIR = BASE_DIR + "/logs"
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
-SLACK_API_KEY = os.getenv('SLACK_API_KEY', 'your api key')
-SLACK_USERNAME = os.getenv('SLACK_USERNAME', "django-nginx-gunicorn-postgres")
+# SLACK_API_KEY = os.getenv('SLACK_API_KEY', 'your api key')
+# SLACK_USERNAME = os.getenv('SLACK_USERNAME', "django-nginx-gunicorn-postgres")
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -273,14 +273,14 @@ LOGGING = {
             'backupCount': 3,
             'formatter': 'verbose'
         },
-        'slack.ERROR.SlackerLogHandler': {
-            'level': 'ERROR',
-            'icon_emoji': ':beetle:',
-            'username': SLACK_USERNAME,
-            'api_key': SLACK_API_KEY,
-            'class': 'slacker_log_handler.SlackerLogHandler',
-            'channel': '#django-app'
-        },
+        # 'slack.ERROR.SlackerLogHandler': {
+        #     'level': 'ERROR',
+        #     'icon_emoji': ':beetle:',
+        #     'username': SLACK_USERNAME,
+        #     'api_key': SLACK_API_KEY,
+        #     'class': 'slacker_log_handler.SlackerLogHandler',
+        #     'channel': '#django-app'
+        # },
     },
     'loggers': {
         'django': {
@@ -288,10 +288,10 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': True,
         },
-        'slack.logger': {
-            'handlers': ['console', 'slack.ERROR.SlackerLogHandler'],
-            'level': 'DEBUG',
-            'propagate': True,
-        }
+        # 'slack.logger': {
+        #     'handlers': ['console', 'slack.ERROR.SlackerLogHandler'],
+        #     'level': 'DEBUG',
+        #     'propagate': True,
+        # }
     },
 }
