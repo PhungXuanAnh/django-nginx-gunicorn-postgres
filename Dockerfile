@@ -13,7 +13,7 @@ WORKDIR /deploy/django-nginx-gunicorn-postgres/
 COPY . /deploy/django-nginx-gunicorn-postgres/
 
 # install our two dependencies
-RUN pip install -r requirement.txt
+RUN pip install -r requirements.txt
 
 RUN python manage.py collectstatic --no-input
 
